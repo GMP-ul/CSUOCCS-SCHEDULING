@@ -57,6 +57,7 @@ nav {
             
 
             .nav-menu-btn {
+                color: var(--text-dark);
                 display: none;
                 cursor: pointer;
                 background: none;
@@ -99,6 +100,7 @@ nav {
                 }
 
                 .nav-close-btn {
+                    color: var(--text-dark);
                     display: transparent;
                     cursor: pointer;
                     background: none;
@@ -238,6 +240,7 @@ nav {
                     
                     
                     button {
+                        color: var(--text-dark);
                         background: none;
                         border: none;
                         padding: 20px;
