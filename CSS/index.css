@@ -315,15 +315,15 @@ nav {
     margin-top: -77px;
     z-index: -1;
 
+    .folder {
+        display: none;
+    }
+
     .hero-background-place {
         position: relative;
         width: 100%;
         height: 100vh;
         overflow: hidden;
-
-        .folder {
-            display: none;
-        }
 
         .shape {
             position: absolute;
@@ -367,10 +367,20 @@ nav {
     @media only screen and (max-width: 487px) {
         margin-top: -350px;
 
-        .hero-background-place{
-            .folder {
+        .folder {
+            display: block;
+            position: absolute;
+            top: 400px;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--text-light);
+            
+            clip-path: polygon(0% 10%, 30% 29%, 100% 30%, 100% 100%, 0 100%, 0 0);
+            z-index: 4;
+        }
 
-            }
+        .hero-background-place{
             .shape {
                 display: none;
             }
@@ -382,4 +392,6 @@ nav {
         }
         
     }
+
+
 }
