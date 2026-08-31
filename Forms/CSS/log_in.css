@@ -1,0 +1,84 @@
+
+
+/* IMPORT FROM 'fonts.google.com' */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* IMPORT FROM 'fonts.google.com' */
+/* END */
+
+
+* {
+    margin: 0;
+}
+
+:root {
+    --text-highlight: #CE8200;
+    --test-notHighlight: #005200;
+    --bacground-login: #1C521C;
+    --background: #c0c0c0;
+    --text-dark: #000000;
+    --text-light: #FFFFFF;
+    --text-normal-highlight: #176478;
+}
+
+nav {
+    position: relative;
+    z-index: 1;
+    .nav-left {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 50px 10px 10px 10px;
+
+        button {
+            margin-right: 100px;
+            background: none;
+            border: none;
+            
+            cursor: pointer;
+            color: var(--background);
+            font-size: 23px;
+            font-weight: 600;
+            font-family: "DM Sans", sans-serif;
+
+            &:hover {
+                color: var(--text-highlight);
+            }
+        }
+    }
+}
+
+.hero {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -92px;
+    
+    
+
+    .background {
+        position: relative;
+        
+        img {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            object-fit: cover;
+            object-position: bottom;
+            z-index: -1;
+        }
+        .hero-gray-background {
+            position: absolute;
+            background-color: var(--bacground-login);
+            width: 100%;
+            height: 100vh;
+            opacity: 85%;
+        }
+    }
+
+    .hero-left{
+        
+    }
+}
