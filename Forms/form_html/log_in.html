@@ -3,42 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSU OCCS - Log in</title>
-
-    <link rel="icon" type="image/pgn" href="/Logo/logo.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-
-    <link rel="stylesheet" href="/Forms/CSS/log_in.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Forms/CSS/log_in.css">
 </head>
-<body>
-    <nav>
-        <div class="nav-left">
-            <button><i class="ri-arrow-left-line"> Back</i></button>
+<body class="wrapper">
+
+    <header>
+        <div class="wrapper">
+            <nav>
+                <h1 class="logo logo-icon">CSU OCCS <br> SCHEDULER</h1>
+                <a href="#" class="btn invis back-icon">Back</a>
+            </nav>
         </div>
-    </nav>
-    <section class="hero">
-        <div class="background">
-            <img src="/IMG/library_enhanced.jpg" alt="">
-            <div class="hero-gray-background"></div>
-        </div>
-        <div class="hero-left">
-            <div class="hero-left-top">
-                <h1>Welcome!</h1>
-            </div>
-            <div class="hero-left-middle">
-                Welcome ro CSU OCCS Scheduler<be>Where appointment management are made easier.
-            </div>
-            <div class="hero-left-bottom">
-                <p>No account yet? Register now and notify the Admin</p>
-                <button>
-                    Sign Up
-                </button>
-            </div>
-        </div>
-        <div class="hero-right">
+    </header> 
+    <!-- end of header-->
+
+    <div class="body">
+        <div class="left">
+            <h1>Welcome back!</h1>
+
+            <p>
+            CSU-OCCS Scheduler Admin Console <br>
+            Manage appointments, staff, and student bookings.
+            </p>
+
+            <p>
+                New to admin team? Register and <br>
+                wait for head Admin approval.
+            </p>
+
+            <a href="register.html" class="btn outline">Register as Admin</a>
 
         </div>
-    </section>
+
+        <div class="right">
+            <div class="sign-in-box">
+                <div class="content">
+                    <h1>Admin Sign In</h1>
+                    <p>
+                        Enter you admin credentials to continue.
+                    </p>
+
+                    <div>
+                        <h2>CarSu Email</h2>
+                        <input type="email" placeholder="genrey.plaza@carsu.edu.ph" id="email">
+                        <img src="images/mail.png" alt="" class="icon">
+                    </div>
+                    
+                    <div>
+                        <h2>Password</h2>
+                        <input type="password" placeholder="•••••••••••••••" id="password">
+                        <img src="images/lock-line 1.png" alt="" class="icon">
+                        <img src="images/eye-off-line 1.png" alt="" class="icon">
+                    </div>
+
+                    <p>
+                        Use the email and password registered with OCCS.
+                    </p>
+
+                    <a href="forgot-password.html" class="link">Forgot your password?</a>
+
+                    <a href="#" class="btn dark">Sign In</a>
+
+                    <p>
+                        New admin? <a href="register.html" class="link">Register for access</a>
+                    </p>
+
+                <div class="bg"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of body -->
+
+    <script src="main.js"></script>
 </body>
 </html>
