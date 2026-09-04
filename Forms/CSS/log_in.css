@@ -8,7 +8,6 @@
     --text-normal-highlight: #176478;
 }
 
-
 *,
 *::after,
 *::before {
@@ -21,7 +20,7 @@ body {
     margin: 40px;
     font-family: "Inter", sans-serif;
 
-    background-image: url("IMG/forms/login/Sign_In_Up_BG.png");
+    background-image: url("/IMG/forms/login/Sign_In_Up_BG.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -70,7 +69,7 @@ nav .logo {
 }
 
 nav .logo-icon::before {
-    content: url("IMG/forms/login/LOGO.png");
+    content: url("/IMG/forms/login/LOGO.png");
     position: absolute;
     left: -10px;
 }
@@ -81,7 +80,7 @@ nav .btn.invis {
 }
 
 nav .btn.back-icon::before {
-    content: url("IMG/forms/login/arrow-left-line 1.png");
+    content: url("/IMG/forms/login/arrow-left-line\ 1.svg");
     position: absolute;
     right: 70px;
 }
