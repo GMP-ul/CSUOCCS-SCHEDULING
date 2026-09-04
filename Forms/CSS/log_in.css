@@ -17,8 +17,11 @@
 }
 
 body {
-    margin: 40px;
+    margin: 0;
+    min-height: 100vh;
+
     font-family: "Inter", sans-serif;
+    color: var(--text-light);
 
     background-image: url("/IMG/forms/login/Sign_In_Up_BG.png");
     background-repeat: no-repeat;
@@ -26,8 +29,7 @@ body {
     background-position: center;
     background-attachment: fixed;
 
-    background-color: var(--main-green);
-    position: relative;
+    background-color: var(--background-login);
 }
 
 /* Buttons */
@@ -35,7 +37,7 @@ body {
 .btn {
     padding: 20px 15px;
     border-radius: 20px;
-    color:#FFFFFF;
+    color:var(--text-light);
     display: inline-block;
     font-weight: bold;
     font-size: 20px;
@@ -44,8 +46,8 @@ body {
 
 .btn.outline {
     background-color: transparent;
-    border: 2px solid var(white);
-    color: var(--white);
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
 }
 
 .btn.dark {
@@ -55,36 +57,96 @@ body {
     padding: 20px 120px;
 }
 
-nav {
+/* Grids */
+
+.grid-container {
+    padding: 30px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 75px 1fr 1fr;
+
+    grid-template-areas:
+        "box-1 box-1"
+        "box-2 box-4"
+        "box-3 box-4";
+
+    width: 100%;
+    min-height: 100vh;
+
+    gap: 1em;
+}
+
+.item {
+    background: transparent; 
+    color: var(--text-light);
+    padding: 0;
+
+    /* FOR GUIDE */
+    outline: 2px solid red;
+}
+
+.box-1 {
+    grid-area: box-1;
     display: flex;
     justify-content: space-between;
 }
 
-nav .logo {
+.box-2 {
+    grid-area: box-2;
+}
+
+.box-3 {
+    grid-area: box-3;
+}
+
+.box-4 {
+    grid-area: box-4;
+}
+
+.sign-in-box {
+    background: var(--text-light);
+    color: #333;
+
+    width: 410px;
+    min-height: 525px;
+
+    padding: 40px;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.item[style*="box-4"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
     font-weight: 900;
     font-size: 23px;
-    color: var(--white);
+    color: var(--text-light);
     position: relative;
     padding-left: 60px;
 }
 
-nav .logo-icon::before {
+.logo-icon::before {
     content: url("/IMG/forms/login/LOGO.png");
     position: absolute;
     left: -10px;
 }
-nav .btn.invis {
+.btn.invis {
     background-color: transparent;
     border: none;
     position: relative;
 }
 
-nav .btn.back-icon::before {
+.btn.back-icon::before {
     content: url("/IMG/forms/login/arrow-left-line\ 1.svg");
     position: absolute;
     right: 70px;
 }
 
-nav .btn.back-icon {
+.btn.back-icon {
     padding-left: 60px;
 }
