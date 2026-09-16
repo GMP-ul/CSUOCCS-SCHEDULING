@@ -24,19 +24,19 @@
 
         <div class="nav-middle">
             <div class="nav-middle-btn">
-                <button><i class="ri-dashboard-line"></i>Dashboard</button>
-                <button><i class="ri-calendar-event-line"></i>Appointments</button>
-                <button><i class="ri-barcode-fill"></i>Referral Code</button>
-                <button><i class="ri-group-line"></i>Applicats</button>
-                <button><i class="ri-bar-chart-grouped-fill"></i>Reports</button>
+                <button class="btn" id="mainBtn" onclick="setActive(this)"><i class="ri-dashboard-line"></i>Dashboard</button>
+                <button class="btn" onclick="setActive(this)"><i class="ri-calendar-event-line"></i>Appointments</button>
+                <button class="btn" onclick="setActive(this)"><i class="ri-barcode-fill"></i>Referral Code</button>
+                <button class="btn" onclick="setActive(this)"><i class="ri-group-line"></i>Applicats</button>
+                <button class="btn" onclick="setActive(this)"><i class="ri-bar-chart-grouped-fill"></i>Reports</button>
             </div>
         </div>
 
         <div class="nav-bottom">
             <div class="nav-bottom-btn">
-                <button><i class="ri-question-line"></i>Help & Support</button>
-                <button><i class="ri-settings-line"></i>Settings</button>
-                <button><i class="ri-logout-box-r-line"></i>Log out</button>
+                <button class="btn" onclick="setActive(this)"><i class="ri-question-line"></i>Help & Support</button>
+                <button class="btn" onclick="setActive(this)"><i class="ri-settings-line"></i>Settings</button>
+                <button class="btn" onclick="setActive(this)"><i class="ri-logout-box-r-line"></i>Log out</button>
             </div>
         </div>
 
@@ -52,5 +52,25 @@
             </div>
         </div>
     </nav>
+
+    <nav class="top-bar">
+        <div>
+            <div>
+                <h1>Dashboard</h1>
+            </div>
+            <div>
+                <p>Friday, September 4,2026</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <input type="text">
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <script src="/Registrators/reg_js/admin.js"></script>
 </body>
 </html>
