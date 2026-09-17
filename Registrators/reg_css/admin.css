@@ -23,13 +23,21 @@ body {
     background-color: var(--text-light);
     margin: 0;
     font-family: "DM Sans", sans-serif;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "box-1 box-2"
+        "box-1 box-3"
+    ;
+    gap: 20px;
 }
 
 /* ### NAV SIDE BAR ### */
 
 .side-bar {
     background-color: var(--background-nav);
-    position: relative;
+    position: static;
     height: 742px;
     width: 60px;   
     padding: 40px 20px 20px 10px;
@@ -389,5 +397,101 @@ body {
             }
         }
     }
+    }
+}
+
+.top-bar {
+    height: 100px;
+    width: auto;
+    border-bottom: 1px solid var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        
+        .section-name {
+            h1 {
+                margin: 0;
+                padding: 0;
+                font-weight: 900;
+            }
+        }
+        .date {
+            p {
+                margin: 0;
+                padding: 0;
+                color: var(--background);
+            }
+        }
+    }
+
+    .other-function {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+
+        .search-bar {
+            position: relative;
+            .search-icon {
+                color: var(--background);
+                position: absolute;
+                font-size: 20px;
+                transform: translate(15px, 12px);
+                pointer-events: none;
+            }
+
+
+            input.inside-search {
+                font-size: 17px;
+                color: var(--background);
+                border-style: solid;
+                border: 2px solid var(--text-light-gray);
+                border-radius: 20px;
+                border-color: var(--text-light-gray);
+                border-style: solid;
+                height: 45px;
+                width: 360px;
+                padding-left: 40px ;
+                background-color: var(--background-select);
+
+                &::placeholder {
+                    color: var(--background);
+                }
+
+                &:focus {
+                    outline: none;
+                    border: 2px solid var(--text-highlight);
+                }
+            }
+        }
+        .noti {
+            i {
+                color: var(--background);
+                font-size: 25px;
+                
+            }
+        }
+        
+        .profile {
+            background-color: #005200;
+            border-radius: 50%;
+            width: 50px;
+            height:50px;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                font-weight: 500;
+                color: var(--text-light);
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                transform: translateY(5px);
+            }
+        }
     }
 }
