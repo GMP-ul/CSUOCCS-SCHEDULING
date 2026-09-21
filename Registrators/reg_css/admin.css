@@ -31,7 +31,19 @@ body {
         "box-1 box-3"
     ;
     gap: 20px;
+
+    .body-background {
+        position: absolute;
+        z-index: -1;
+
+        transform: translate(60%, 2%);
+        opacity: 10%;
+        img {
+            width: 800px;
+        }
+    }
 }
+
 
 /* ### NAV SIDE BAR ### */
 
@@ -402,6 +414,7 @@ body {
 
 .top-bar {
     height: 100px;
+    background-color: var(--text-light);
     width: auto;
     border-bottom: 1px solid var(--background);
     display: flex;
@@ -497,5 +510,49 @@ body {
 }
 
 main {
-    
+    margin-right: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 130px 1fr 1fr;
+    grid-template-areas: 
+        "box-2-1 box-2-2 box-2-3 box-2-4"
+        "box-2-5 box-2-5 box-2-6 box-2-6"
+        "box-2-7 box-2-7 box-2-8 box-2-8"
+    ;
+    gap: 10px;
+    .area-main-1 {
+        border: 1px solid var(--text-dark);
+        border-radius: 20px;
+        box-shadow: -1px -1px 2px 2px var(--text-highlight);
+        position: relative;
+    }
+    .area-main-2 {
+        border: 1px solid var(--text-dark);
+        border-radius: 20px;
+        background: var(--text-light);
+    }
+    .area-main-3 {
+        border: 1px solid var(--text-dark);
+        border-radius: 20px;
+    }
+    .area-main-4 {
+        border: 1px solid var(--text-dark);
+        border-radius: 20px;
+    }
+    .area-main-5 {
+        border: 1px solid var(--text-dark);
+        border-radius: 20px;
+    }
+    .area-main-6 {
+        border: 1px solid var(--text-dark);
+        border-radius: 20px;
+    }
+    .area-main-7 {
+        border: 1px solid var(--text-dark);
+        border-radius: 20px;
+    }
+    .area-main-8 {
+        border: 1px solid var(--text-dark);
+        border-radius: 20px;
+    }
 }
