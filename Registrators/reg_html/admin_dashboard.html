@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scheduler-Dashboard</title>
-    <link rel="stylesheet" href="/Registrators/reg_css/admin.css">
+    <title>OCCS Dashboard</title>
+    
+    <link rel="stylesheet" href="/Registrators/reg_css/admin_dashboard.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
 
 
@@ -30,30 +31,29 @@
         <div class="nav-middle">
             <div class="nav-middle-btn">
                 <button class="btn" id="mainBtn" onclick="setActive(this)"><i class="ri-dashboard-line"></i>Dashboard</button>
-                <button class="btn" onclick="setActive(this)"><i class="ri-calendar-event-line"></i>Appointments</button>
-                <button class="btn" onclick="setActive(this)"><i class="ri-barcode-fill"></i>Referral Code</button>
-                <button class="btn" onclick="setActive(this)"><i class="ri-group-line"></i>Applicats</button>
-                <button class="btn" onclick="setActive(this)"><i class="ri-bar-chart-grouped-fill"></i>Reports</button>
+                <button class="btn" id="appointments" onclick="setActive(this)"><i class="ri-calendar-event-line"></i>Appointments</button>
+                <button class="btn" id="referral_code" onclick="setActive(this)"><i class="ri-barcode-fill"></i>Referral Code</button>
+                <button class="btn" id="applicats" onclick="setActive(this)"><i class="ri-group-line"></i>Applicats</button>
+                <button class="btn" id="reports" onclick="setActive(this)"><i class="ri-bar-chart-grouped-fill"></i>Reports</button>
             </div>
         </div>
 
         <div class="nav-bottom">
             <div class="nav-bottom-btn">
-                <button class="btn" onclick="setActive(this)"><i class="ri-question-line"></i>Help & Support</button>
-                <button class="btn" onclick="setActive(this)"><i class="ri-settings-line"></i>Settings</button>
+                <button class="btn" id="help&support" onclick="setActive(this)"><i class="ri-question-line"></i>Help & Support</button>
+                <button class="btn" id="settings" onclick="setActive(this)"><i class="ri-settings-line"></i>Settings</button>
                 <button class="btn" onclick="setActive(this)"><i class="ri-logout-box-r-line"></i>Log out</button>
             </div>
         </div>
 
         <div class="nav-bottom-2">
-                <div class="nav-logo-bottom">
-                    <div class="background-logo"></div>
-                    <img src="/Logo/logo.png" alt="">
-                </div>
-                <div class="nav-title-bottom">
-                    <h1>CSU OCCS SCHEDULER</h1>
-                    <p>Admin console</p>
-                </div>
+            <div class="nav-logo-bottom">
+                <div class="background-logo"></div>
+                <img src="/Logo/logo.png" alt="">
+            </div>
+            <div class="nav-title-bottom">
+                <h1>CSU OCCS SCHEDULER</h1>
+                <p>Admin console</p>
             </div>
         </div>
     </nav>
@@ -164,7 +164,10 @@
                 </div>
             </div>
             <div class="main-5-body">
-                <div class="main-5-body-element-1"></div>
+                <div class="main-5-body-element-1">
+                    <div class="name-letter">J</div>
+                    <p>Juan Dela Cruz</p>
+                </div>
                 <div class="main-5-body-element-2"></div>
                 <div class="main-5-body-element-3"></div>
             </div>
@@ -174,6 +177,6 @@
         <div class="area-main-8" style="grid-area: box-2-8;"></div>
     </main>
 
-    <script src="/Registrators/reg_js/admin.js"></script>
+    <script src="../reg_js/admin_dashboard.js"></script>
 </body>
 </html>
