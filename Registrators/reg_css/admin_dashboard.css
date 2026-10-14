@@ -56,9 +56,13 @@ body {
 
 .side-bar {
     background-color: var(--background-nav);
-    position: static;
-    height: 557px;
-    width: 45px;   
+    position: sticky;
+    top: 0;
+    align-self: start;
+    grid-area: box-1;
+    height: calc(100vh - 45px);
+    width: 45px;  
+
     padding: 30px 15px 15px 7.5px;
     display: flex;
     flex-direction: column;
@@ -237,8 +241,8 @@ body {
 
     &:hover {
         background-color: var(--background-nav);
-        position: relative;
-        height: 557px;
+        position: sticky;
+        height: calc(100vh - 45px);
         width: 263px;   
         padding: 30px 15px 15px 7.5px;
         display: flex;
@@ -514,6 +518,7 @@ body {
 
 main {
     margin-right: 11px;
+    margin-bottom: 11px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 98px 1fr 1fr;
