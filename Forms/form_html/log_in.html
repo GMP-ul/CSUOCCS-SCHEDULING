@@ -3,105 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSU OCCS Scheduler | Admin Sign In</title>
+
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Page stylesheet -->
     <link rel="stylesheet" href="/Forms/form_css/log_in.css">
 </head>
 <body class="grid-container">
-    /* --------------------- Box 1 --------------------- */
+    <!-- Header: logo and back link -->
     <header class="item box-1">
-        <div>
-            <h1 class="logo logo-icon">
-                CSU OCCS <br> SCHEDULER
-            </h1>
-        </div>
+        <h1 class="logo logo-icon">
+            CSU OCCS<br>
+            SCHEDULER
+        </h1>
 
-        <div>
-            <a href="#" class="btn invis back-icon">Back</a>
-        </div>
+        <a href="#" class="btn invis back-icon">Back</a>
     </header>
 
-    /* --------------------- Box 2 --------------------- */
-    <div class="item box-2">
-
-        <p class="welcome">
-            <b>Welcome back!</b>
-        </p>
+    <!-- Welcome panel -->
+    <main class="item box-2">
+        <h2 class="welcome">Welcome back!</h2>
 
         <img
             class="orLine"
             src="/IMG/forms/login/Line 3.svg"
-            alt="Orange Line"
+            alt=""
         >
 
         <p class="par1">
-            <b><i>CSU-OCCS Scheduler Admin Console</i></b><br>
+            <strong><em>CSU-OCCS Scheduler Admin Console</em></strong><br>
             Manage appointments, staff, and student bookings.
         </p>
 
         <p class="par2">
-            New to admin team? Register and <br>
+            New to admin team? Register and<br>
             wait for head Admin approval.
         </p>
 
         <div class="regBttn">
-            <a href="register.html" class="btn outline">
-                Register as Admin
-            </a>
+            <a href="register.html" class="btn outline">Register as Admin</a>
         </div>
+    </main>
 
-    </div>
+    <!-- Admin sign-in card -->
+    <section class="item box-3" aria-labelledby="login-heading">
+        <h1 id="login-heading">Admin Sign In</h1>
 
+        <p>Enter your admin credentials to continue.</p>
 
-    /* --------------------- Box 3 --------------------- */
-    <div class="item box-3">
-        <h1>Admin Sign In</h1>
-
-         <p>
-            Enter your admin credentials to continue.
-        </p>
-
-        <div>
-            <h2>CarSu Email</h2>
-                <input type="email"
+        <div class="form-field">
+            <h2 id="email-label">CarSu Email</h2>
+            <div class="input-wrap">
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
                     placeholder="genrey.plaza@carsu.edu.ph"
-                    id="email">
-                 <img src="/IMG/forms/login/mail.png" alt="" class="icon">
+                    aria-labelledby="email-label"
+                    autocomplete="username"
+                >
+                <img
+                    src="/IMG/forms/login/mail.png"
+                    alt=""
+                    class="icon"
+                    aria-hidden="true"
+                >
+            </div>
         </div>
 
-        <div>
-            <h2>Password</h2>
+        <div class="form-field">
+            <h2 id="password-label">Password</h2>
+            <div class="input-wrap">
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="•••••••••••••••"
+                    aria-labelledby="password-label"
+                    autocomplete="current-password"
+                >
 
-            <input type="password"
-                placeholder="•••••••••••••••"
-                id="password">
-
-                <img src="/IMG/forms/login/lock-line 1.png" alt="" class="icon">
-                <img src="/IMG/forms/login/eye-off-line 1.png" alt="" class="icon">
+                <img
+                    src="/IMG/forms/login/lock-line 1.png"
+                    alt=""
+                    class="icon"
+                    aria-hidden="true"
+                >
+                <img
+                    src="/IMG/forms/login/eye-off-line 1.png"
+                    alt=""
+                    class="icon"
+                    aria-hidden="true"
+                >
             </div>
 
-            <p>
+            <p class="helper-text">
                 Use the email and password registered with OCCS.
             </p>
 
-            <a href="forgot-password.html" class="link">
+            <a href="forgot-password.html" class="link forgot-link">
                 Forgot your password?
             </a>
 
-            <a href="#" class="btn dark">
-                Sign In
-            </a>
-            
-            <p>
-                New admin?
-                <a href="register.html" class="link">
-                    Register for access                   
-                </a>
-            </p>
-    </div>
+            <a href="#" class="btn dark">Sign In</a>
 
-    <script src="main.js"></script>
+            <p class="register-prompt">
+                New admin?
+                <a href="register.html" class="link">Register for access</a>
+            </p>
+        </div>
+    </section>
 </body>
 </html>

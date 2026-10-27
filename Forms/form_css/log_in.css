@@ -1,151 +1,82 @@
+/* =========================
+   CSU OCCS SCHEDULER
+   Admin Sign-In Page
+   ========================= */
+
+/* ---------- Theme ---------- */
+
 :root {
-    --text-highlight: #CE8200;
-    --test-notHighlight: #005200;
-    --bacground-login: #1C521C;
-    --background: #c0c0c0;
-    --text-dark: #000000;
-    --text-light: #FFFFFF;
-    --text-normal-highlight: #176478;
+    --color-green: #255F38;
+    --color-green-dark: #1C4529;
+    --color-green-overlay: rgba(28, 82, 28, 0.65);
+    --color-orange: #CE8200;
+    --color-cream: #F7F5EF;
+    --color-white: #FFFFFF;
+    --color-text: #333333;
+    --color-input-border: #D5D5D5;
+    --color-placeholder: #999999;
 }
 
+/* ---------- Reset and page background ---------- */
+
 *,
-*::after,
-*::before {
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    margin: 0;
     min-height: 100vh;
-
     font-family: "Inter", sans-serif;
-    color: var(--text-light);
+    color: var(--color-white);
 
-    background-image: url("/IMG/forms/login/Sign_In_Up_BG.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    background-color: var(--background-login);
+    background:
+        linear-gradient(
+            var(--color-green-overlay),
+            var(--color-green-overlay)
+        ),
+        url("/IMG/forms/login/Sign_In_Up_BG.png") center / cover no-repeat fixed;
 }
 
-/* Buttons */
-
-.btn {
-    padding: 20px 15px;
-    border-radius: 20px;
-    color:var(--text-light);
-    display: inline-block;
-    font-weight: bold;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.btn.outline {
-    background-color: transparent;
-    border: 2px solid var(--text-light);
-    color: var(--text-light);
-}
-
-.btn.dark {
-    background-color: var(--test-notHighlight);
-    font-size: 25px;
-    border-radius: 36.5px;
-    padding: 20px 120px;
-}
-
-/*------------ ***GRIDS*** ------------*/
+/* ---------- Main page grid ---------- */
 
 .grid-container {
-    padding: 30px 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 75px 1fr 1fr;
-
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: 75px 1fr;
     grid-template-areas:
         "box-1 box-1"
-        "box-2 box-3"
         "box-2 box-3";
 
+    gap: 30px;
     width: 100%;
     min-height: 100vh;
-
-    gap: 1em;
+    padding: 30px 50px;
 }
 
 .item {
-    background: transparent; 
-    color: var(--text-light);
+    background: transparent;
     padding: 0;
-
-    /* FOR GUIDE */
-    outline: 2px solid red;
+    color: var(--color-white);
 }
 
-/*------------ BOX 1 ------------*/
+/* ---------- Header: logo and Back link ---------- */
+
 .box-1 {
     grid-area: box-1;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
-
-/*------------ BOX 2 ------------*/
-.box-2 {
-    grid-area: box-2;
-
-    display: grid;
-    grid-template-columns: 1fr;
-
-    grid-template-areas:
-        "welcome"
-        "line"
-        "par1"
-        "par2"
-        "regBttn";
-
-    align-content: start;
-    row-gap: 30px;
-}
-
-.welcome {
-    grid-area: welcome;
-    font-size: 75px;
-}
-
-.orLine {
-    grid-area: line;
-}
-
-.par1 {
-    grid-area: par1;
-    font-size: 23px;
-}
-
-.par2 {
-    grid-area: par2;
-    font-size: 23px;
-}
-
-.regBttn {
-    grid-area: regBttn;
-}
-
-/*------------ BOX 3 ------------*/
-.box-3 {
-    grid-area: box-3;
-}
-
-/*------------ ***END OF GRIDS*** ------------*/
 
 .logo {
-    font-weight: 900;
-    font-size: 23px;
-    color: var(--text-light);
     position: relative;
     padding-left: 60px;
+    color: var(--color-white);
+    font-size: 23px;
+    font-weight: 900;
 }
 
 .logo-icon::before {
@@ -153,18 +84,276 @@ body {
     position: absolute;
     left: -10px;
 }
-.btn.invis {
-    background-color: transparent;
-    border: none;
-    position: relative;
+
+.btn {
+    display: inline-block;
+    padding: 20px 15px;
+    border-radius: 20px;
+    color: var(--color-white);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.btn.back-icon::before {
-    content: url("/IMG/forms/login/arrow-left-line\ 1.svg");
-    position: absolute;
-    right: 70px;
+.btn.invis {
+    position: relative;
+    padding: 10px 15px;
+    border: none;
+    background: transparent;
+    color: var(--color-white);
+    font-size: 18px;
 }
 
 .btn.back-icon {
     padding-left: 60px;
+}
+
+.btn.back-icon::before {
+    content: url("/IMG/forms/login/arrow-left-line 1.svg");
+    position: absolute;
+    right: 70px;
+}
+
+/* ---------- Welcome panel ---------- */
+
+.box-2 {
+    grid-area: box-2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
+
+.welcome {
+    font-size: clamp(42px, 5vw, 75px);
+    font-weight: bold;
+}
+
+.orLine {
+    width: 135px;
+    height: auto;
+}
+
+.par1,
+.par2 {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.regBttn {
+    margin-top: 5px;
+}
+
+.btn.outline {
+    border: 2px solid var(--color-white);
+    background: transparent;
+    color: var(--color-white);
+}
+
+/* ---------- Login card ---------- */
+
+.box-3 {
+    grid-area: box-3;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+
+    margin-right: 15px;
+    padding: 40px 45px;
+
+    border-top: 5px solid var(--color-orange);
+    border-left: 5px solid var(--color-orange);
+    border-radius: 25px;
+    background: var(--color-cream);
+    color: var(--color-green);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.box-3 h1 {
+    color: var(--color-orange);
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 800;
+}
+
+.box-3 h2 {
+    margin-bottom: 10px;
+    color: var(--color-green);
+    font-size: 18px;
+}
+
+.box-3 p {
+    margin-bottom: 0;
+    color: var(--color-text);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.box-3 .link {
+    display: inline-block;
+    margin-top: 4px;
+    color: var(--color-green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.box-3 .link:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Email and password fields ---------- */
+
+.input-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.box-3 input {
+    width: 100%;
+    min-height: 52px;
+    padding: 15px 45px 15px 45px;
+
+    border: 1px solid var(--color-input-border);
+    border-radius: 10px;
+    outline: none;
+
+    background: var(--color-white);
+    color: #222222;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.box-3 input:focus {
+    border-color: var(--color-green);
+    box-shadow: 0 0 0 3px rgba(37, 95, 56, 0.15);
+}
+
+.box-3 input::placeholder {
+    color: var(--color-placeholder);
+}
+
+#password {
+    margin-bottom: 8px;
+}
+
+/* Icons are positioned inside their input wrappers. */
+
+.input-wrap .icon {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transform: translateY(-50%);
+}
+
+#email + .icon,
+#password ~ .icon:first-of-type {
+    left: 15px;
+    right: auto;
+}
+
+#password ~ .icon:last-of-type {
+    right: 15px;
+    left: auto;
+}
+
+/* ---------- Login links and button ---------- */
+
+.box-3 a.link[href="forgot-password.html"] {
+    display: block;
+    text-align: center;
+}
+
+.register-prompt {
+    width: 100%;
+    text-align: center;
+}
+
+.btn.dark {
+    display: block;
+    width: 100%;
+    min-height: 52px;
+    margin-top: 8px;
+    padding: 16px;
+
+    border: none;
+    border-radius: 50px;
+    background: var(--color-green);
+    color: var(--color-white);
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn.dark:hover {
+    background: var(--color-green-dark);
+}
+
+/* ---------- Responsive layout ---------- */
+
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "box-1"
+            "box-2"
+            "box-3";
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .box-2 {
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    .box-3 {
+        width: 100%;
+        margin-right: 0;
+        padding: 32px 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .logo {
+        padding-left: 48px;
+        font-size: 18px;
+    }
+
+    .logo-icon::before {
+        transform: scale(0.8);
+        transform-origin: top left;
+    }
+
+    .btn.invis {
+        font-size: 16px;
+    }
+
+    .welcome {
+        font-size: 42px;
+    }
+
+    .par1,
+    .par2 {
+        font-size: 16px;
+    }
+
+    .box-3 {
+        padding: 28px 20px;
+    }
 }
