@@ -122,5 +122,18 @@
     </section>
 
     <script src="/Forms/log_in_form/log_in.js"></script>
+
+    <script>
+        const header = document.querySelector(".box-1");
+        
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 20) {
+                header.classList.add("scrolled");
+            }
+            else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>
 </body>
 </html>
