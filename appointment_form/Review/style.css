@@ -1,0 +1,535 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --green: #19551f;
+    --dark-green: #005b0b;
+    --orange: #d88700;
+    --text: #292929;
+    --muted: #858585;
+    --border: #777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f7f8f6;
+    color: var(--text);
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+/* MAIN CONTAINER */
+.app-shell {
+    width: min(1240px, calc(100% - 48px));
+    min-height: 100vh;
+    margin: auto;
+    padding: 24px 42px 30px;
+    background: white;
+    box-shadow: 0 0 24px rgba(0,0,0,.04);
+}
+
+/* HEADER */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--green);
+}
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #138b52;
+    border-radius: 50%;
+    color: #138b52;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.brand-name strong,
+.brand-name span {
+    display: block;
+}
+
+.brand-name strong {
+    font-size: 14px;
+}
+
+.brand-name span {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* PROGRESS */
+.progress-wrap {
+    margin-top: 27px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.progress-label span:last-child {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.progress-track {
+    height: 4px;
+    margin-top: 9px;
+    background: #e5e5e5;
+}
+
+.progress-track span {
+    display: block;
+    width: 80%;
+    height: 100%;
+    background: var(--orange);
+}
+
+/* PAGE HEADING */
+.page-heading {
+    margin: 42px 0 30px;
+}
+
+.page-heading h1 {
+    font-size: clamp(30px, 3.5vw, 43px);
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    color: var(--green);
+    margin-bottom: 5px;
+}
+
+.page-heading h1 span {
+    color: var(--orange);
+}
+
+.page-heading p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* MAIN LAYOUT */
+.review-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 125px;
+    gap: 35px;
+    align-items: start;
+}
+
+.review-content {
+    min-width: 0;
+    width: 100%;
+}
+
+/* CARDS */
+.info-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 13px 14px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: white;
+}
+
+/* CARD HEADING */
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card-heading h2 {
+    color: var(--dark-green);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* PENCIL EDIT BUTTON */
+.edit-button {
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    padding: 2px;
+    border: none;
+    background: transparent;
+    color: #008b45;
+    cursor: pointer;
+}
+
+.edit-button svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+}
+
+.edit-button:hover {
+    color: var(--dark-green);
+}
+
+/* INFORMATION DETAILS */
+.info-card dl {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    row-gap: 6px;
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.35;
+}
+
+.info-card dt {
+    color: var(--muted);
+}
+
+.info-card dd {
+    margin: 0;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+/* PERSONAL CARD */
+.personal-card {
+    min-height: 112px;
+}
+
+/* ACADEMIC AND SCHEDULE CARDS */
+.two-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+}
+
+.two-cards .info-card {
+    min-height: 105px;
+}
+
+.two-cards .info-card dl {
+    grid-template-columns: 35% 65%;
+}
+
+/* CHECKBOX */
+.confirm-check {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 8px 0 15px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.confirm-check input {
+    width: 14px;
+    height: 14px;
+    accent-color: var(--green);
+    cursor: pointer;
+}
+
+/* BUTTONS */
+.action-row {
+    display: grid;
+    grid-template-columns: 0.85fr 1.4fr;
+    gap: 10px;
+}
+
+.back-button,
+.continue-button {
+    min-height: 39px;
+    border-radius: 9px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.back-button {
+    grid-column: 1;
+    grid-row: 1;
+    border: 1px solid #777;
+    background: white;
+    color: var(--green);
+}
+
+.back-button span {
+    margin-right: 7px;
+    font-size: 16px;
+    color: #a3b3c0;
+}
+
+.continue-button {
+    grid-column: 2;
+    grid-row: 1;
+    border: 1px solid var(--green);
+    background: var(--green);
+    color: white;
+}
+
+.continue-button:hover:not(:disabled) {
+    background: #104318;
+}
+
+.continue-button:disabled {
+    background: #a8b8aa;
+    border-color: #a8b8aa;
+    cursor: not-allowed;
+}
+
+/* STATUS */
+.status-message {
+    min-height: 14px;
+    margin-top: 8px;
+    color: var(--green);
+    font-size: 10px;
+}
+
+/* RIGHT SIDE STEPS */
+.step-sidebar {
+    display: flex;
+    flex-direction: column;
+    border-right: 5px solid #e5e5e5;
+}
+
+.step {
+    position: relative;
+    min-height: 74px;
+    padding: 3px 12px 0 0;
+    color: var(--dark-green);
+    text-align: right;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.step.active::after {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 74px;
+    background: var(--orange);
+    content: "";
+}
+
+.step:not(.done):not(.active) {
+    color: #777;
+}
+
+/* MOBILE FOOTER */
+.mobile-footer {
+    display: none;
+}
+
+/* ===================================
+   TABLET
+=================================== */
+@media (max-width: 850px) {
+
+    .app-shell {
+        width: min(700px, calc(100% - 24px));
+        padding: 18px 22px;
+    }
+
+    .review-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .step-sidebar {
+        display: none;
+    }
+
+    .page-heading {
+        margin: 28px 0 22px;
+    }
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+@media (max-width: 560px) {
+
+    body {
+        background: #222;
+    }
+
+    .app-shell {
+        width: calc(100% - 12px);
+        min-height: 100vh;
+        padding: 12px 13px 20px;
+        background: white;
+        box-shadow: none;
+    }
+
+    /* HEADER */
+    .brand {
+        gap: 7px;
+    }
+
+    .brand-mark {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .brand-name strong {
+        font-size: 10px;
+    }
+
+    .brand-name span {
+        font-size: 8px;
+    }
+
+    /* PROGRESS */
+    .progress-wrap {
+        margin-top: 15px;
+    }
+
+    .progress-label {
+        font-size: 8px;
+    }
+
+    .progress-track {
+        height: 2px;
+        margin-top: 6px;
+    }
+
+    /* HEADING */
+    .page-heading {
+        margin: 22px 0 19px;
+    }
+
+    .page-heading h1 {
+        font-size: 21px;
+        letter-spacing: -.6px;
+    }
+
+    .page-heading p {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+    /* LAYOUT */
+    .review-layout {
+        display: block;
+    }
+
+    .review-content {
+        width: 100%;
+    }
+
+    /* CARDS */
+    .info-card {
+        padding: 11px 10px;
+        margin-bottom: 12px;
+        border-radius: 10px;
+    }
+
+    .personal-card {
+        min-height: 120px;
+    }
+
+    .card-heading {
+        margin-bottom: 10px;
+    }
+
+    .card-heading h2 {
+        font-size: 9px;
+    }
+
+    .edit-button {
+        width: 20px;
+        height: 20px;
+    }
+
+    .edit-button svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* DETAILS */
+    .info-card dl {
+        grid-template-columns: 42% 58%;
+        row-gap: 7px;
+        font-size: 8px;
+        line-height: 1.4;
+    }
+
+    /* STACK CARDS */
+    .two-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .two-cards .info-card {
+        min-height: 0;
+        padding: 11px 10px;
+    }
+
+    .two-cards .info-card dl {
+        grid-template-columns: 42% 58%;
+    }
+
+    /* CHECKBOX */
+    .confirm-check {
+        gap: 8px;
+        margin: 13px 0;
+        font-size: 8px;
+    }
+
+    .confirm-check input {
+        width: 13px;
+        height: 13px;
+    }
+
+    /* MOBILE BUTTON ORDER */
+    .action-row {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .continue-button {
+        order: 1;
+        min-height: 35px;
+        font-size: 9px;
+    }
+
+    .back-button {
+        order: 2;
+        min-height: 35px;
+        font-size: 9px;
+    }
+
+    /* FOOTER */
+    .status-message {
+        font-size: 8px;
+    }
+
+    .mobile-footer {
+        display: block;
+        margin-top: 13px;
+        color: var(--muted);
+        text-align: center;
+        font-size: 8px;
+    }
+}

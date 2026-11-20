@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSUOCCS Scheduler | Set Your Schedule</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="brand-header">
+      <div class="brand">
+        <img src="logo.png" alt="CSUOCCS Logo" class="brand-logo">
+        <div>
+           <strong>CSUOCCS</strong>
+          <span>SCHEDULER</span>
+        </div>
+      </div>
+      <div class="mobile-step">Step 3 of 5</div>
+    </header>
+
+    <div class="progress-wrap" aria-label="Appointment progress">
+      <div class="progress-label"><span>SET SCHEDULE</span><span>Step 3 of 5</span></div>
+      <div class="progress-track"><span></span></div>
+    </div>
+
+    <section class="page-heading">
+      <h1>Set Your <span>Schedule</span></h1>
+      <p>Choose an available date and time for your appointment.</p>
+    </section>
+
+    <div class="booking-layout">
+      <section class="calendar-panel" aria-labelledby="calendar-title">
+        <h2 id="calendar-title">Select a date</h2>
+        <div class="calendar">
+          <div class="calendar-top">
+            <button class="month-arrow" id="prev-month" aria-label="Previous month">&#8249;</button>
+            <h3 id="month-label">September 2026</h3>
+            <button class="month-arrow" id="next-month" aria-label="Next month">&#8250;</button>
+          </div>
+          <div class="weekdays" aria-hidden="true">
+            <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+          </div>
+          <div class="calendar-days" id="calendar-days"></div>
+          <div class="legend">
+            <span><i class="dot available"></i>Available</span>
+            <span><i class="dot selected"></i>Selected</span>
+            <span><i class="dot booked"></i>Fully booked</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="time-panel" aria-labelledby="time-title">
+        <h2 id="time-title">Available time - <span id="selected-date-heading">Sep 15, 2026</span></h2>
+        <div class="time-grid" id="time-grid"></div>
+        <p class="helper-text">Book slots and confirm the appointment you set.</p>
+        <div class="schedule-summary" aria-live="polite">
+          <small>YOUR SELECTED SCHEDULE</small>
+          <strong id="summary-date">September 15, 2026 · 1:30 PM</strong>
+          <span>with OCCS Registrar - Ms. Santos</span>
+        </div>
+        <div class="action-row">
+          <button class="back-button" id="back-button"><span aria-hidden="true">←</span> Back</button>
+          <button class="continue-button" id="continue-button">Continue</button>
+        </div>
+        <p class="status-message" id="status-message" role="status"></p>
+      </section>
+
+      <aside class="step-sidebar" aria-label="Appointment steps">
+        <div class="step done">IDENTIFICATION</div>
+        <div class="step done">YOUR INFORMATION</div>
+        <div class="step active">SET SCHEDULE</div>
+        <div class="step">Checking</div>
+        <div class="step">CONFIRMATION</div>
+      </aside>
+    </div>
+    <footer class="mobile-footer">Select the date and time to continue</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

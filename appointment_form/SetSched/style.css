@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --green: #19551f;
+  --green-dark: #005b0b;
+  --green-soft: #e2ffe6;
+  --orange: #d88700;
+  --text: #252525;
+  --muted: #858585;
+  --border: #dedede;
+  --white: #fff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background: #f7f8f6;
+  font-family: Inter, Arial, sans-serif;
+}
+button { font: inherit; }
+
+.app-shell {
+  width: min(1240px, calc(100% - 48px));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px 42px 30px;
+  background: var(--white);
+  box-shadow: 0 0 24px rgba(0,0,0,.045);
+}
+.brand-header { display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 9px; color: var(--green); font-size: 13px; line-height: 1.05; }
+.brand-mark {
+  display: grid; place-items: center; width: 35px; height: 35px;
+  border: 2px solid #138b52; border-radius: 50%; color: #138b52; font-weight: 800;
+}
+.brand strong, .brand span { display: block; }
+.brand span { font-size: 10px; font-weight: 700; }
+.mobile-step { display: none; color: var(--muted); font-size: 11px; }
+
+.progress-wrap { margin-top: 26px; }
+.progress-label { display: flex; justify-content: space-between; color: var(--green); font-size: 10px; font-weight: 700; }
+.progress-label span:last-child { color: var(--muted); font-weight: 400; }
+.progress-track { height: 3px; margin-top: 7px; background: #e7e7e7; }
+.progress-track span { display: block; width: 60%; height: 100%; background: var(--orange); }
+
+.page-heading { margin: 38px 0 48px; }
+.page-heading h1 { margin: 0 0 5px; color: var(--green); font-size: clamp(30px, 4vw, 43px); letter-spacing: -1.5px; }
+.page-heading h1 span { color: var(--orange); }
+.page-heading p { margin: 0; color: var(--muted); font-size: 13px; }
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+}
+
+.booking-layout { display: grid; grid-template-columns: minmax(340px, 1fr) minmax(400px, 1.15fr) 145px; gap: 34px; align-items: start; }
+.calendar-panel h2, .time-panel h2 { margin: 0 0 24px; color: var(--green-dark); font-size: 21px; }
+.time-panel h2 { font-size: 18px; margin-bottom: 28px; }
+.calendar { padding: 0 8px; }
+.calendar-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+.calendar-top h3 { margin: 0; color: #606060; font-size: 14px; font-weight: 600; }
+.month-arrow { border: 0; background: transparent; color: #888; font-size: 28px; line-height: 1; cursor: pointer; padding: 0 8px; }
+.month-arrow:hover { color: var(--green); }
+.weekdays, .calendar-days { display: grid; grid-template-columns: repeat(7, 1fr); justify-items: center; }
+.weekdays { margin-bottom: 10px; color: #666; font-size: 11px; }
+.calendar-days { row-gap: 7px; }
+.day {
+  display: grid; place-items: center; width: 34px; height: 34px; padding: 0;
+  border: 0; border-radius: 50%; background: transparent; color: #b5b5b5; font-size: 12px;
+}
+.day.available { background: var(--green-soft); color: #63856a; cursor: pointer; }
+.day.available:hover { outline: 1px solid var(--green); }
+.day.selected { background: var(--green-dark); color: white; font-weight: 700; }
+.day.today { border: 1px solid var(--green); color: #444; }
+.day.booked { position: relative; color: #aaa; text-decoration: line-through; text-decoration-color: #f08a9b; }
+.day:disabled { cursor: default; }
+.legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 25px; color: #666; font-size: 11px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.dot { display: inline-block; width: 13px; height: 13px; border-radius: 50%; }
+.dot.available { background: var(--green-soft); }
+.dot.selected { background: var(--green-dark); }
+.dot.booked { border: 1px solid #ddd; background: linear-gradient(180deg, transparent 47%, #ed8b9b 48%, #ed8b9b 54%, transparent 55%); }
+
+.time-grid { display: grid; grid-template-columns: repeat(3, minmax(90px, 1fr)); gap: 15px 13px; }
+.time-slot {
+  min-height: 41px; padding: 8px 6px; border: 1px solid #d9d9d9; border-radius: 9px;
+  background: white; color: #555; font-size: 11px; cursor: pointer;
+}
+.time-slot:hover:not(:disabled) { border-color: var(--green); }
+.time-slot.selected { border-color: var(--green-dark); background: var(--green-dark); color: white; font-weight: 700; }
+.time-slot:disabled { border-color: #eee; background: #eee; color: #c4c4c4; cursor: not-allowed; }
+.helper-text { margin: 25px 0 10px; color: var(--muted); font-size: 12px; }
+.schedule-summary { display: flex; flex-direction: column; gap: 3px; padding: 15px 16px; border: 1px solid #b5f2bd; border-radius: 9px; background: rgba(216,255,220,.72); }
+.schedule-summary small { color: var(--green-dark); font-size: 9px; }
+.schedule-summary strong { color: #222; font-size: 12px; }
+.schedule-summary span { color: #777; font-size: 9px; }
+.action-row { display: grid; grid-template-columns: 1fr 1.8fr; gap: 10px; margin-top: 15px; }
+.back-button, .continue-button { min-height: 43px; border-radius: 10px; font-size: 12px; font-weight: 600; cursor: pointer; }
+.back-button { border: 1px solid #777; background: white; color: var(--green); }
+.back-button span { margin-right: 8px; color: #9ba9b5; font-size: 19px; vertical-align: -1px; }
+.continue-button { border: 1px solid var(--green); background: var(--green); color: white; }
+.continue-button:hover { background: #104318; }
+.status-message { min-height: 16px; margin: 8px 0 0; color: var(--green); font-size: 11px; }
+.step-sidebar { display: flex; flex-direction: column; gap: 0; border-right: 5px solid #e5e5e5; }
+.step { position: relative; min-height: 74px; padding: 3px 12px 0 0; color: var(--green-dark); text-align: right; font-size: 9px; font-weight: 700; }
+.step.active::after { position: absolute; top: 0; right: -5px; width: 5px; height: 74px; background: var(--orange); content: ""; }
+.step:not(.done):not(.active) { color: #777; }
+.mobile-footer { display: none; }
+
+@media (max-width: 900px) {
+  .app-shell { width: min(720px, calc(100% - 28px)); padding: 18px 24px 28px; }
+  .booking-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; }
+  .step-sidebar { display: none; }
+  .page-heading { margin: 30px 0 36px; }
+}
+@media (max-width: 600px) {
+  body { background: white; }
+  .app-shell { width: 100%; min-height: 100vh; padding: 10px 13px 22px; box-shadow: none; }
+  .brand-mark { width: 28px; height: 28px; font-size: 12px; }
+  .brand { font-size: 10px; gap: 6px; }
+  .brand span { font-size: 8px; }
+  .mobile-step { display: block; }
+  .progress-wrap { margin-top: 16px; }
+  .progress-label { font-size: 8px; }
+  .progress-track { height: 2px; margin-top: 5px; }
+  .page-heading { margin: 21px 0 22px; }
+  .page-heading h1 { font-size: 25px; letter-spacing: -.8px; }
+  .page-heading p { font-size: 10px; }
+  .booking-layout { display: flex; flex-direction: column; gap: 25px; }
+  .calendar-panel, .time-panel { width: 100%; }
+  .calendar-panel h2 { margin-bottom: 17px; font-size: 16px; }
+  .calendar { padding: 0 3px; }
+  .calendar-top { margin-bottom: 13px; }
+  .calendar-top h3 { font-size: 11px; }
+  .month-arrow { font-size: 23px; }
+  .weekdays { margin-bottom: 7px; font-size: 9px; }
+  .calendar-days { row-gap: 4px; }
+  .day { width: 29px; height: 29px; font-size: 10px; }
+  .legend { gap: 12px; margin-top: 15px; font-size: 9px; }
+  .dot { width: 10px; height: 10px; }
+  .time-panel h2 { margin: 0 0 18px; font-size: 14px; }
+  .time-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .time-slot { min-height: 36px; border-radius: 8px; font-size: 9px; }
+  .helper-text { margin: 18px 0 8px; font-size: 9px; }
+  .schedule-summary { padding: 11px 12px; }
+  .schedule-summary small { font-size: 7px; }
+  .schedule-summary strong { font-size: 10px; }
+  .schedule-summary span { font-size: 7px; }
+  .action-row { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+  .continue-button, .back-button { min-height: 36px; border-radius: 8px; font-size: 9px; }
+  .continue-button { order: 1; }
+  .back-button { order: 2; }
+  .status-message { font-size: 9px; }
+  .mobile-footer { display: block; margin-top: 4px; color: #888; text-align: center; font-size: 9px; }
+}
+
+@media (max-width: 600px) {
+    .brand-logo {
+        width: 30px;
+        height: 30px;
+    }
+}
