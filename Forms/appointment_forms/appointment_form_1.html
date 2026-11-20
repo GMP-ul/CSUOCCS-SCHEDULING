@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Page stylesheet -->
+    <link rel="stylesheet" href="/Forms/CSS/appointment_forms.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="top">
+            <h1 id="appointmentText">
+                <span style="color: #255F38;">Appointment</span>
+                <span style="color: #ce8200;">Form</span>
+            </h1>
+            <h3>Let's check a few details before we begin.</h3>
+        </div>
+
+        <div class="middle">
+            <div class="inputCard">
+                <div>
+                    <h3>
+                        Applicant Type
+                        <span style="color: red;">*</span>
+                    </h3>
+                </div>
+                    
+                <div>
+                    <label for="applicant_type"></label>
+
+                    <select name="apllicantType" id="apllicantTypes">
+                        <option value="test1">test1</option>
+                        <option value="test2">test2</option>
+                        <option value="test3">test3</option>
+                        <option value="test4">test4</option>
+                        <option value="test5">test5</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="referral_code">Do you have a referral code?<br></label>
+                    
+                    <label>
+                        <input type="radio" name="referral_code" value="yes">
+                        Yes, I have a referral code <br>
+                    </label>
+                    
+                    <label>
+                        <input type="radio" name="referral_code" value="no">
+                        No, I don't have one yet <br>
+                    </label>
+                </div>
+
+                <div>
+                    <img src="/Forms/registration_from/regIMG/notice.png" alt="Notice">
+                    <p>
+                        <b>You'll need a referral code to book an appointment.</b><br>
+                        New here? We'll walk you through how to request one <br>
+                        <a href="#">Learn about the referral process <br></a>
+                    </p>
+                </div>
+
+                <div>
+                    <img src="/Forms/IMG/arrow-left-line 1.svg" alt="Back">
+                    <button>Back</button>
+                </div>
+                
+                <button>Continue</button>
+            </div>
+            </div>
+
+            <div class="stepTracker">
+                <div id="stepLabels">
+                    <h3>IDENTIFICATION</h3>
+                    <h3>YOUR INFORMATION</h3>
+                    <H3>SET SCHEDULE</H3>
+                    <H3>CHECKING</H3>
+                </div>
+                <img src="#" alt="Progress Bar">
+            </div>
+        </div>
+    </div>
+
+    <script src="#"></script>
+</body>
+</html>

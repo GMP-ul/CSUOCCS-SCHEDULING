@@ -37,7 +37,7 @@ body {
             var(--color-green-overlay),
             var(--color-green-overlay)
         ),
-        url("/Forms/log_in_form/log_in. IMG/Sign_In_Up_BG.png") center / cover no-repeat fixed;
+        url("/Forms/IMG/Sign_In_Up_BG.png") center / cover no-repeat fixed;
 }
 
 /* ---------- Main page grid ---------- */
@@ -106,7 +106,7 @@ body {
 }
 
 .logo-icon::before {
-    content: url("/Forms/log_in_form/log_in. IMG/LOGO.png");
+    content: url("/Forms/IMG/LOGO.png");
     position: absolute;
     left: -10px;
 }
@@ -135,7 +135,7 @@ body {
 }
 
 .btn.back-icon::before {
-    content: url("/Forms/log_in_form/log_in. IMG/arrow-left-line\ 1.svg");
+    content: url("/Forms/IMG/arrow-left-line\ 1.svg");
     position: absolute;
     right: 70px;
 }
