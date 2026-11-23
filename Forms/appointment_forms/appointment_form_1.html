@@ -47,36 +47,38 @@
                     </select>
                 </div>
 
-                <div>
-                    <label for="referral_code">Do you have a referral code?<br></label>
+                <div class="referralSection">
+                    <h3>Do you have a referral code?<br></h3>
                     
                     <label>
                         <input type="radio" name="referral_code" value="yes">
-                        Yes, I have a referral code <br>
+                        Yes, I have a referral code
                     </label>
                     
                     <label>
                         <input type="radio" name="referral_code" value="no">
-                        No, I don't have one yet <br>
+                        No, I don't have one yet
                     </label>
                 </div>
 
-                <div>
+                <div class="noticeBox">
                     <img src="/Forms/registration_from/regIMG/notice.png" alt="Notice">
+                    
                     <p>
                         <b>You'll need a referral code to book an appointment.</b><br>
                         New here? We'll walk you through how to request one <br>
-                        <a href="#">Learn about the referral process <br></a>
+                        <a href="#">Learn about the referral process</a>
                     </p>
                 </div>
 
-                <div>
-                    <img src="/Forms/IMG/arrow-left-line 1.svg" alt="Back">
-                    <button>Back</button>
+                <div  id="navForms">
+                    <a href="#" class="btn backBtn" onclick="previousStep(); return false;">
+                        <img src="/Forms/IMG/arrow-left-line 1.svg" alt="Back"> 
+                        Back
+                    </a>
+
+                    <a href="#" class="btn continueBtn" onclick="nextStep(); return false;">Continue</a>
                 </div>
-                
-                <button>Continue</button>
-            </div>
             </div>
 
             <div class="stepTracker">
@@ -86,11 +88,14 @@
                     <H3>SET SCHEDULE</H3>
                     <H3>CHECKING</H3>
                 </div>
-                <img src="#" alt="Progress Bar">
+                
+                <div class="progressBar">
+                    <div class="progressFill"></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="#"></script>
+    <script src="/Forms/appointment_forms/appointment_form_1.js"></script>
 </body>
 </html>
