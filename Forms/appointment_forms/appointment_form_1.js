@@ -1,24 +1,16 @@
-let currentStep = 0;
-const totalSteps = 4;
+// Form 1 is the first of four steps, so its progress starts at 0%.
+const progressFill = document.querySelector(".progressFill");
 
-function updateProgress() {
-    const percentage = (currentStep / totalSteps) * 100;
-
-    document.querySelector(".progressFill").style.height = percentage + "%";
+if (progressFill) {
+    progressFill.style.height = "0%";
 }
 
-function nextStep() {
-    if (currentStep < totalSteps) {
-        currentStep++;
-        updateProgress();
+window.addEventListener("scroll", function() {
+    const top = document.querySelector(".top");
+
+    if (window.scrollY > 20) {
+        top.classList.add("scrolled");
+    } else {
+        top.classList.remove("scrolled");
     }
-}
-
-function previousStep() {
-    if (currentStep > 0) {
-        currentStep--;
-        updateProgress();
-    }
-}
-
-updateProgress();
+});

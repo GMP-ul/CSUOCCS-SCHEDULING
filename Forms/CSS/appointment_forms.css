@@ -1,11 +1,11 @@
 /* ---------- Theme ---------- */
 
 :root {
-    --color-green: #255F38;
+    --color-green: #255f38;
     --color-green-dark: #1C4529;
     --color-green-overlay: #1c521ca6;
     --color-orange: #ce8200;
-    --color-cream: #F7F5EF;
+    --color-cream: #f7f5ef;
     --color-white: #FFFFFF;
     --color-text: #333333;
     --color-light-text: #888;
@@ -47,23 +47,46 @@ body {
 }
 
 .top {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 12px;
+
+    width: 100vw;
+
+    /* Extend beyond the mainContainer's padding */
+    margin-left: calc(50% - 50vw);
+
+    padding: 20px 7%;
+
+    background-color: transparent;
+
+    transition: background-color 0.3s ease,
+                backdrop-filter 0.3s ease;
+}
+
+.top.scrolled {
+    background-color: color-mix(in srgb, var(--color-green) 20%, transparent);
+    backdrop-filter: brightness(0.8);
+    box-shadow: 0 4px 15px rgb(0, 0, 0, 0.15);
+}
+
+.top h1 {
+    margin-top: 5px;
 }
 
 .top h3 {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--color-light-text);
-    margin-bottom: 35px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .middle {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: flex-start;
     justify-content: space-between;
     width: 100%;
     gap: 40px;
@@ -73,8 +96,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 15px;
+    gap: 22px;
     flex: 1;
+    min-width: 0;
 }
 
 .inputCard input[type="radio"] + span {
@@ -87,6 +111,11 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     align-items: stretch;
+    align-self: flex-start;
+    flex: 0 0 auto;
+    position: sticky;
+    top: 145px;
+    height: 60vh;
     gap: 15px;
 }
 
@@ -134,6 +163,12 @@ body {
 
 .continueBtn:hover {
     background-color: var(--color-green);
+}
+
+.continueBtn[aria-disabled="true"] {
+    opacity: 0.55;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 .noticeBox {
@@ -191,7 +226,25 @@ select {
 
     padding: 0 15px;
 
-    border: 1px solid var (--color-input-border);
+    border: 1px solid var(--color-input-border);
+    border-radius: 15px;
+
+    background-color: var(--color-white);
+
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--color-text);
+
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid var(--color-input-border);
     border-radius: 15px;
 
     background-color: var(--color-white);
@@ -216,7 +269,7 @@ input[type="radio"] {
     gap: 12px;
 }
 
-.refferalSection label {
+.referralSection label {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -226,9 +279,27 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-.refferalSection h3 {
+.referralSection h3 {
     font-size: 16px;
     margin-bottom: 10px;
+}
+
+.field {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Space labels away from their corresponding controls. */
+.inputCard h3 {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.field > div {
+    min-width: 0;
 }
 
 /* ---------- Main IDs ---------- */
@@ -260,4 +331,31 @@ input[type="radio"] {
     width: 100%;
     margin-top: 35px;
 }
+
+#help {
+    font: inherit;
+    color: var(--color-placeholder);
+}
+
+#help a {
+    color: var(--color-green);
+}
+
+#field_70 {
+    flex: 0 0 70%;
+}
+
+#field_50 {
+    flex: 0 0 50%;
+}
+
+#field_100 {
+    flex: 0 0 100%;
+}
+
+#field_auto {
+    flex: 1;
+    min-width: 0;
+}
+
 
