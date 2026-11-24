@@ -29,7 +29,7 @@ body {
     font-family: "Inter", sans-serif;
     color: var(--color-text);
     background:
-        url("/Forms/IMG/appointment_form_bg.png") center / cover no-repeat fixed;
+        url("/appointment_form/shared_CSS_&_images/background_2.png") center / cover no-repeat fixed;
 }
 
 /* ---------- Classes ---------- */
@@ -47,28 +47,13 @@ body {
 }
 
 .top {
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    display: flex;
+    flex-direction: column;
     gap: 12px;
+    width: 100%;
+    padding: 20px 0 20px 0;
 
-    width: 100vw;
-
-    /* Extend beyond the mainContainer's padding */
-    margin-left: calc(50% - 50vw);
-
-    padding: 20px 7%;
-
-    background-color: transparent;
-
-    transition: background-color 0.3s ease,
-                backdrop-filter 0.3s ease;
-}
-
-.top.scrolled {
-    background-color: color-mix(in srgb, var(--color-green) 20%, transparent);
-    backdrop-filter: brightness(0.8);
-    box-shadow: 0 4px 15px rgb(0, 0, 0, 0.15);
+    justify-content: left;
 }
 
 .top h1 {
@@ -171,6 +156,12 @@ body {
     pointer-events: none;
 }
 
+.continueBtn.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
 .noticeBox {
     display: flex;
     flex-direction: row;
@@ -224,12 +215,12 @@ select {
     width: 100%;
     height: 50px;
 
-    padding: 0 15px;
+    padding: 15px;
 
     border: 1px solid var(--color-input-border);
     border-radius: 15px;
 
-    background-color: var(--color-white);
+    background-color: color-mix(in srgb, var(--color-white) 30%, transparent);
 
     font-family: inherit;
     font-size: 15px;
@@ -244,10 +235,10 @@ input {
 
     padding: 0 15px;
 
-    border: 1px solid var(--color-input-border);
+    border: 2px solid var(--color-input-border);
     border-radius: 15px;
 
-    background-color: var(--color-white);
+    background-color: color-mix(in srgb, var(--color-white) 30%, transparent);
 
     font-family: inherit;
     font-size: 15px;
@@ -281,7 +272,8 @@ input[type="radio"] {
 
 .referralSection h3 {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 7px;
 }
 
 .field {
