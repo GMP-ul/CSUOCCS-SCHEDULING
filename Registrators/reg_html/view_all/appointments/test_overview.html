@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/Registrators/reg_css/view_all/appointments/test_overview.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="body-background">
+        <img src="/Logo/logo.png" alt="">
+    </div>
+
+    <nav class="side-bar" style="grid-area: box-1;">
+        <div class="nav-top">
+            <div class="nav-logo">
+                <div class="background-logo"></div>
+                <img src="/Logo/logo.png" alt="">
+            </div>
+            <div class="nav-title">
+                <h1>CSU OCCS SCHEDULER</h1>
+                <p>Admin console</p>
+            </div>
+        </div>
+
+        <div class="nav-middle">
+            <div class="nav-middle-btn">
+                <button class="btn" id="mainBtn" onclick="setActive(this)"><i class="ri-dashboard-line"></i>Dashboard</button>
+                <button class="btn" id="appointments" onclick="setActive(this)"><i class="ri-calendar-event-line"></i>Appointments</button>
+                <button class="btn" id="referral_code" onclick="setActive(this)"><i class="ri-barcode-fill"></i>Referral Code</button>
+                <button class="btn" id="applicats" onclick="setActive(this)"><i class="ri-group-line"></i>Applicats</button>
+                <button class="btn" id="reports" onclick="setActive(this)"><i class="ri-bar-chart-grouped-fill"></i>Reports</button>
+            </div>
+        </div>
+
+        <div class="nav-bottom">
+            <div class="nav-bottom-btn">
+                <button class="btn" id="help&support" onclick="setActive(this)"><i class="ri-question-line"></i>Help & Support</button>
+                <button class="btn" id="settings" onclick="setActive(this)"><i class="ri-settings-line"></i>Settings</button>
+                <button class="btn" onclick="setActive(this)"><i class="ri-logout-box-r-line"></i>Log out</button>
+            </div>
+        </div>
+
+        <div class="nav-bottom-2">
+            <div class="nav-logo-bottom">
+                <div class="background-logo"></div>
+                <img src="/Logo/logo.png" alt="">
+            </div>
+            <div class="nav-title-bottom">
+                <h1>CSU OCCS SCHEDULER</h1>
+                <p>Admin console</p>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="top-bar" style="grid-area: box-2;">
+        <div class="title">
+            <div class="section-name">
+                <h1>Appointments / Test Overview</h1>
+            </div>
+            <div class="date">
+                <p>Manage all schedule appointments</p>
+            </div>
+        </div>
+        <div class="other-function">
+            <div class="search-bar">
+                <i class="ri-search-line search-icon"></i>
+                <input type="text" placeholder="Search Applicats, ref. no..." class="inside-search">
+            </div>
+            <div class="noti">
+                <i class="ri-notification-2-line"></i>
+            </div>
+            <div class="profile">
+                <h1>J</h1>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="top">
+            <div class="top_1">
+                <a href="/Registrators/reg_html/admin_appointments.html">
+                    <button id="back"><i class="ri-arrow-left-s-line"></i>Back to appointmet form</button>
+                </a>
+            </div>
+            <div class="top_2">
+                <a href="">
+                    <button>Filter</button>
+                </a>
+                <button id="newTest" type="button">New Test</button>
+            </div>
+        </div>
+        <div class="info">
+            <div class="info-1" style="grid-area: box-1;">
+                <div class="title">
+                    <h3>Scheduled test</h3>
+                </div>
+                <div class="row row-head">
+                    <p>NAME</p>
+                    <p>AVAILABLE SLOTS</p>
+                    <p>NUMBER OF TAKERS</p>
+                    <p>STATUS</p>
+                    <p>EDIT</p>
+                </div>
+                <div class="test-list" id="testList"></div>
+            </div>
+
+
+
+            <div class="info-2" style="grid-area: box-2;">
+                2
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="testModal">
+        <form class="modal-box" id="testForm">
+            <div class="modal-menu" id="modalMenu" hidden>
+                <button type="button" class="menu-dots" id="menuDots" aria-label="More options">
+                    <i class="ri-more-2-fill"></i>
+                </button>
+                <div class="menu-dropdown" id="menuDropdown">
+                    <button type="button" class="menu-item danger" id="deleteTest">
+                        <i class="ri-delete-bin-line"></i> Delete test
+                    </button>
+                </div>
+            </div>
+
+            <h2 id="modalTitle">Add New Test</h2>
+            <p class="modal-sub">Create a test session for applicants to register into</p>
+
+            <label class="field">
+                <span class="label-text">Test Name <span class="req">*</span></span>
+                <input type="text" id="testName" placeholder="e.g. Comprehensive Exam" required>
+            </label>
+
+            <label class="field">
+                <span class="label-text">Location <span class="req">*</span></span>
+                <input type="text" id="testLocation" placeholder="e.g. CCIS Conference Room A" required>
+            </label>
+
+            <div class="field-row">
+                <label class="field">
+                    <span class="label-text">Date <span class="req">*</span></span>
+                    <input type="date" id="testDate" required>
+                </label>
+                <label class="field">
+                    <span class="label-text">Time <span class="req">*</span></span>
+                    <input type="time" id="testTime" required>
+                </label>
+            </div>
+
+            <div class="field-row">
+                <label class="field">
+                    <span class="label-text">Adviser / Evaluator <span class="req">*</span></span>
+                    <select id="testAdviser" required>
+                        <option value="" disabled selected>Select adviser</option>
+                        <option value="Adviser 1">Adviser 1</option>
+                        <option value="Adviser 2">Adviser 2</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </label>
+                <label class="field">
+                    <span class="label-text">Slot Capacity <span class="req">*</span></span>
+                    <input type="number" id="testSlots" min="1" placeholder="e.g. 20" required>
+                </label>
+            </div>
+
+            <!-- Only shows when "Others" is picked -->
+            <label class="field" id="otherWrap" hidden>
+                <span class="label-text">Adviser name <span class="req">*</span></span>
+                <input type="text" id="testAdviserOther" placeholder="Enter adviser / evaluator name">
+            </label>
+
+            <p class="modal-note">Applicants will be able to register into this test once created</p>
+
+            <div class="modal-actions">
+                <button type="button" id="cancelTest" class="btn-cancel">CANCEL</button>
+                <button type="submit" id="submitBtn" class="btn-create">Create test</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Delete confirmation popup -->
+    <div class="modal" id="deleteModal">
+        <div class="modal-box confirm-box">
+            <h2>Delete this test?</h2>
+            <p class="modal-sub">
+                This action <strong>cannot be undone</strong>. The test session and all its
+                registration data will be permanently removed. There is no way to restore it.
+            </p>
+            <p class="modal-note" id="deleteTestName"></p>
+
+            <div class="modal-actions">
+                <button type="button" id="cancelDelete" class="btn-cancel">CANCEL</button>
+                <button type="button" id="confirmDelete" class="btn-delete">YES, DELETE</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Registrators/reg_js/view_all/test_overview.js"></script>
+</body>
+</html>

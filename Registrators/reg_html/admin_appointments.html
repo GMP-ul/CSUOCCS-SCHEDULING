@@ -79,30 +79,45 @@
     </nav>
 
     <main>
+        <!-- BOX 1: Upcoming Tests -->
         <div class="box-1" style="grid-area: box-1;">
             <div class="box-1-top">
                 <h3>Upcoming Tests</h3>
-                <a href="">View All</a>
+                <a href="../reg_html/view_all/appointments/test_overview.html">View All</a>
             </div>
-            <div class="box-1-main"></div>
+            
+            <!-- Wrapper for arrows and list -->
+            <div class="upcoming-wrapper">
+                <button class="nav-arrow left" id="scrollLeftBtn"><i class="ri-arrow-left-s-line"></i></button>
+                
+                <div class="box-1-main" id="upcomingTestList">
+                    <!-- JS injects cards here -->
+                </div>
+                
+                <button class="nav-arrow right" id="scrollRightBtn"><i class="ri-arrow-right-s-line"></i></button>
+            </div>
         </div>
+
+        <!-- BOX 2: Registered Users -->
         <div class="box-2" style="grid-area: box-2;">
             <div class="box-2-top">
                 <div class="box-2-element">
                     <h3>Registered Users</h3>
                     <h5>5</h5>
                 </div>
-                <a href="">
+                <a href="../reg_html/view_all/appointments/registered_user.html">
                     View All
                 </a>
             </div>
             <div class="box-2-main"></div>
         </div>
+
+        <!-- BOX 3: Test Overview -->
         <div class="box-3" style="grid-area: box-3;">
             <div class="box-3-top">
                 <div class="box-3-topEl">
                     <h3>Test Overview</h3>
-                    <a href="">View All</a>
+                    <a href="../reg_html/view_all/appointments/test_overview.html">View All</a>
                 </div>
                 <div class="box-3-botInfo">
                     <div class="botInfo-1">
@@ -118,15 +133,19 @@
                     </div>
                 </div>
             </div>
-            <div class="box-3-main"></div>
+            <div class="box-3-main" id="testOverviewList">
+                <!-- JS injects rows here -->
+            </div>
         </div>
+
+        <!-- BOX 4: Waiting to be Registered -->
         <div class="box-4" style="grid-area: box-4;">
             <div class="box-4-top">
                 <div class="box-4-element">
                     <h3>Waiting to be Registered</h3>
                     <h5>5</h5>
                 </div>
-                <a href="">
+                <a href="../reg_html/view_all/appointments/waiting_registered.html">
                     View All
                 </a>
             </div>
