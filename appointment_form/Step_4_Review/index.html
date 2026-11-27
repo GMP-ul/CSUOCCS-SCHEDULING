@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSUOCCS Scheduler | Review Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="app-shell">
+
+    <!-- HEADER -->
+    <header class="brand-header">
+        <div class="brand">
+            <div class="brand-mark">C</div>
+            <div class="brand-name">
+                <strong>CSUOCCS</strong>
+                <span>SCHEDULER</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-wrap">
+        <div class="progress-label">
+            <span>CHECKING</span>
+            <span>Step 4 of 5</span>
+        </div>
+
+        <div class="progress-track">
+            <span></span>
+        </div>
+    </div>
+
+    <!-- PAGE TITLE -->
+    <section class="page-heading">
+        <h1>Review Your <span>Appointment</span></h1>
+        <p>Check your details before confirming. Tap the pencil to edit any section.</p>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <div class="review-layout">
+
+        <section class="review-content">
+
+            <!-- PERSONAL INFORMATION -->
+            <article class="info-card personal-card">
+
+                <div class="card-heading">
+                    <h2>PERSONAL INFORMATION</h2>
+
+                    <button class="edit-button"
+                            data-edit="personal"
+                            aria-label="Edit personal information">
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M13 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8"/>
+                            <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4Z"/>
+                        </svg>
+
+                    </button>
+                </div>
+
+                <dl>
+                    <dt>Name</dt>
+                    <dd id="applicant-name">Genrey Plaza</dd>
+
+                    <dt>Contact Number</dt>
+                    <dd id="contact-number">09XX XXX XXXX</dd>
+
+                    <dt>Email</dt>
+                    <dd id="email-address">juan.delacruz@carsu.edu.ph</dd>
+
+                    <dt>Address</dt>
+                    <dd id="home-address">Among Balay</dd>
+                </dl>
+
+            </article>
+
+
+            <!-- ACADEMIC INFORMATION AND SCHEDULE -->
+            <div class="two-cards">
+
+                <!-- ACADEMIC INFORMATION -->
+                <article class="info-card">
+
+                    <div class="card-heading">
+                        <h2>ACADEMIC INFORMATION</h2>
+
+                        <button class="edit-button"
+                                data-edit="academic"
+                                aria-label="Edit academic information">
+
+                            <svg viewBox="0 0 24 24">
+                                <path d="M13 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8"/>
+                                <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4Z"/>
+                            </svg>
+
+                        </button>
+                    </div>
+
+                    <dl>
+                        <dt>College</dt>
+                        <dd id="college">CCIS</dd>
+
+                        <dt>Course</dt>
+                        <dd id="course">CS</dd>
+
+                        <dt>Year level</dt>
+                        <dd id="year-level">3rd Year</dd>
+
+                        <dt>Referral Code</dt>
+                        <dd id="referral-code">0012</dd>
+                    </dl>
+
+                </article>
+
+
+                <!-- SCHEDULE -->
+                <article class="info-card">
+
+                    <div class="card-heading">
+                        <h2>SCHEDULE</h2>
+
+                        <button class="edit-button"
+                                data-edit="schedule"
+                                aria-label="Edit schedule">
+
+                            <svg viewBox="0 0 24 24">
+                                <path d="M13 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8"/>
+                                <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4Z"/>
+                            </svg>
+
+                        </button>
+                    </div>
+
+                    <dl>
+                        <dt>Service</dt>
+                        <dd id="service">Registration</dd>
+
+                        <dt>Test</dt>
+                        <dd id="test-name">Exam</dd>
+
+                        <dt>Date</dt>
+                        <dd id="appointment-date">September 15, 2026</dd>
+
+                        <dt>Time</dt>
+                        <dd id="appointment-time">1:30 PM</dd>
+                    </dl>
+
+                </article>
+
+            </div>
+
+
+            <!-- CONFIRMATION CHECKBOX -->
+            <label class="confirm-check">
+                <input type="checkbox" id="confirm-check">
+                <span>I confirm the information above is correct.</span>
+            </label>
+
+
+            <!-- BUTTONS -->
+            <div class="action-row">
+
+                <button class="continue-button"
+                        id="confirm-button"
+                        disabled>
+                    Confirm Appointment
+                </button>
+
+                <button class="back-button" id="back-button">
+                    <span>←</span> Back
+                </button>
+
+            </div>
+
+            <p class="status-message"
+               id="status-message"
+               role="status"></p>
+
+            <p class="mobile-footer">
+                Check all the information you provided and continue
+            </p>
+
+        </section>
+
+
+        <!-- RIGHT SIDE STEPS -->
+        <aside class="step-sidebar">
+
+            <div class="step done">
+                IDENTIFICATION
+            </div>
+
+            <div class="step done">
+                YOUR INFORMATION
+            </div>
+
+            <div class="step done">
+                SET SCHEDULE
+            </div>
+
+            <div class="step active">
+                Checking
+            </div>
+
+            <div class="step">
+                CONFIRMATION
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+/* ---------- Theme ---------- */
+
+:root {
+    --color-green: #255f38;
+    --color-green-dark: #1C4529;
+    --color-green-overlay: #1c521ca6;
+    --color-orange: #ce8200;
+    --color-cream: #f7f5ef;
+    --color-white: #FFFFFF;
+    --color-text: #333333;
+    --color-light-text: #888;
+    --color-semi-light-text: #555;
+    --color-input-border: #D5D5D5;
+    --color-placeholder: #999999;
+}
+
+/* ---------- Reset and page background ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    color: var(--color-text);
+    background:
+        url("/appointment_form/shared_CSS_&_images/background_2.png") center / cover no-repeat fixed;
+}
+
+/* ---------- Classes ---------- */
+
+.mainContainer {
+    width: 97%;
+    min-height: calc(100vh - 36px);
+    margin: 18px auto;
+    padding: 70px 7%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 20px 0 20px 0;
+
+    justify-content: left;
+}
+
+.top h1 {
+    margin-top: 5px;
+}
+
+.top h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-light-text);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+.inputCard {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+    flex: 1;
+    min-width: 0;
+}
+
+.inputCard input[type="radio"] + span {
+    margin-left: 8px;
+}
+
+.stepTracker {
+    color: var(--color-green);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+    align-self: flex-start;
+    flex: 0 0 auto;
+    position: sticky;
+    top: 145px;
+    height: 60vh;
+    gap: 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 14px 20px;
+    border-radius: 13px;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.backBtn {
+    flex: 0 0 32%;
+
+    color: var(--color-green);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-light-text);
+}
+
+.backBtn img {
+    width: 24px;
+    height: 24px;
+}
+
+.continueBtn {
+    flex: 1;
+
+    color: var(--color-white);
+    background-color: var(--color-green-dark);
+    border: 2px solid var(--color-green-dark);
+}
+
+.backBtn:hover {
+    background-color: var(--color-cream);
+}
+
+.continueBtn:hover {
+    background-color: var(--color-green);
+}
+
+.continueBtn[aria-disabled="true"] {
+    opacity: 0.55;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.continueBtn.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.noticeBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+
+    width: fit-content;
+    padding: 15px 20px;
+
+    background-color: rgb(from var(--color-orange) r g b / 23%);
+    border-radius: 20px;
+
+    color: var(--color-orange);
+    font-size: 12px;
+}
+
+.noticeBox img {
+    width: 20px;
+    height: 20px;
+}
+
+.noticeBox a {
+    color: var(--color-green);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.progressBar {
+    width: 8px;
+    height: auto;
+    align-self: stretch;
+
+    background-color: var(--color-light-text);
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progressFill {
+    width: 100%;
+    height: 0%;
+
+    background-color: var(--color-orange);
+    border-radius: 20px;
+
+    transition: height 0.4s ease;
+}
+
+/* ---------- Input Fields ---------- */
+select {
+    width: 100%;
+    height: 50px;
+
+    padding: 15px;
+
+    border: 1px solid var(--color-input-border);
+    border-radius: 15px;
+
+    background-color: color-mix(in srgb, var(--color-white) 30%, transparent);
+
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--color-text);
+
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 2px solid var(--color-input-border);
+    border-radius: 15px;
+
+    background-color: color-mix(in srgb, var(--color-white) 30%, transparent);
+
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--color-text);
+
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    accent-color: var(--color-green);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.referralSection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.referralSection label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14px;
+    color: var(--color-semi-light-text);
+    cursor: pointer;
+}
+
+.referralSection h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.field {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Space labels away from their corresponding controls. */
+.inputCard h3 {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.field > div {
+    min-width: 0;
+}
+
+/* ---------- Main IDs ---------- */
+
+#stepLabels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+}
+
+#stepLabels h3 {
+    font-size: 12px;
+}
+
+/* ---------- Form 1 IDs ---------- */
+
+#appointmentText {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#navForms {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    width: 100%;
+    margin-top: 35px;
+}
+
+#help {
+    font: inherit;
+    color: var(--color-placeholder);
+}
+
+#help a {
+    color: var(--color-green);
+}
+
+#field_70 {
+    flex: 0 0 70%;
+}
+
+#field_50 {
+    flex: 0 0 50%;
+}
+
+#field_100 {
+    flex: 0 0 100%;
+}
+
+#field_auto {
+    flex: 1;
+    min-width: 0;
+}
+
+

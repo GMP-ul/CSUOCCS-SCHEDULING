@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSU OCCS Scheduler | Admin Registrations</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Page stylesheet -->
+    <link rel="stylesheet" href="/Forms/CSS/log_in.css">
+</head>
+<body class="grid-container">
+    <!-- Header: logo and back link -->
+    <header class="item box-1">
+        <h1 class="logo logo-icon">
+            CSU OCCS<br>
+            SCHEDULER
+        </h1>
+
+        <a href="/Forms/log_in_form/log_in.html" class="btn invis back-icon">Back</a>
+    </header>
+
+    <!-- Welcome panel -->
+    <main class="item box-2">
+        <h2 class="welcome">Admin Access</h2>
+
+        <img
+            class="orLine"
+            src="/Forms/IMG/Line 3.svg"
+            alt=""
+        >
+
+        <p class="par1">
+            <strong><em>Register as OCCS Scheduler admin</em></strong><br>
+            Manage appointments, staff, and student bookings.
+        </p>
+
+        <div class="noticeCard1">
+            <img src="/Forms/registration_from/regIMG/notice.png" alt="Notice!" id="noticeIMG">
+            <p id="notice">
+                New admin account require approval from<br>
+                the Head Admin before you can sign in.
+            </p>
+        </div>
+    </main>
+
+    <!-- Admin sign-in card -->
+    <section class="item box-3" aria-labelledby="login-heading">
+        <h1 id="login-heading">Admin Sign Up</h1>
+
+        <p>For OCCS staff and faculty coordinators only.</p>
+
+        <div class="form-field">
+            <h2 id="fullName-label">Full Name</h2>
+            <div class="input-wrap">
+                <input
+                    type="fullName"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Genrey Plaza"
+                    aria-labelledby="fullName-label"
+                >
+                <img
+                    src="/Forms/registration_from/regIMG/userIcon.png"
+                    alt=""
+                    class="icon"
+                    aria-hidden="true"
+                >
+            </div>
+        </div>
+        
+        <div class="form-field">
+            <h2 id="email-label">CarSu Email</h2>
+            <div class="input-wrap">
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="genrey.plaza@carsu.edu.ph"
+                    aria-labelledby="email-label"
+                    autocomplete="username"
+                >
+                <img
+                    src="/Forms/IMG/mail.png"
+                    alt=""
+                    class="icon"
+                    aria-hidden="true"
+                >
+            </div>
+        </div>
+
+        <div class="form-field">
+            <h2 id="department-label">Department / Office</h2>
+            <div class="input-wrap">
+                <input
+                    type="department"
+                    id="department"
+                    name="department"
+                    placeholder="e.g. CCIS"
+                    aria-labelledby="department-label"
+                >
+                <img
+                    src="/Forms/registration_from/regIMG/departmentIcon.png"
+                    alt=""
+                    class="icon"
+                    aria-hidden="true"
+                >
+            </div>
+        </div>
+
+        <div class="form-field">
+            <h2 id="password-label">Password</h2>
+            <div class="input-wrap">
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="•••••••••••••••"
+                    aria-labelledby="password-label"
+                >
+
+                <img
+                    src="/Forms/IMG/lock-line 1.png"
+                    alt=""
+                    class="icon"
+                    aria-hidden="true"
+                >
+                <img
+                    src="/Forms/IMG/eye-off-line 1.png"
+                    alt=""
+                    class="icon"
+                    aria-hidden="true"
+                >
+            </div>
+
+            <p class="helper-text">
+                At least 8 characters, with a number and symbol.
+            </p>
+
+            <h2 id="cnfrmPassword-label">Confirm Password</h2>
+            <div class="input-wrap">
+                <input
+                    type="password"
+                    id="cnfrmPassword"
+                    name="cnfrmPassword"
+                    placeholder="•••••••••••••••"
+                    aria-labelledby="cnfrmPassword-label"
+                >
+
+                <img
+                    src="/Forms/IMG/lock-line 1.png"
+                    alt=""
+                    class="icon"
+                    aria-hidden="true"
+                >
+                <img
+                    src="/Forms/IMG/eye-off-line 1.png"
+                    alt=""
+                    class="icon"
+                    aria-hidden="true"
+                >
+            </div>
+
+            <label id="regAgreement">
+                <input type="checkbox" id="agreementC">
+                <p>
+                    I agree to the
+                    <a href="#" class="link">Admin Terms</a>
+                    and
+                    <a href="#" class="link">Data Use Plociy</a>
+                </p>
+            </label>
+
+            <a href="#" class="btn dark">Submit for Approval</a>
+
+            <p class="register-prompt" id="loginPath1">
+                Already an admin?
+                <a href="/Forms/log_in_form/log_in.html" class="link"><u>Sign In</u></a>
+            </p>
+        </div>
+    </section>
+
+    <script src="/Forms/log_in_form/log_in.js"></script>
+    
+    <script>
+        const header = document.querySelector(".box-1");
+        
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 20) {
+                header.classList.add("scrolled");
+            }
+            else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+</html>

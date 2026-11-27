@@ -37,7 +37,7 @@ body {
             var(--color-green-overlay),
             var(--color-green-overlay)
         ),
-        url("/IMG/forms/login/Sign_In_Up_BG.png") center / cover no-repeat fixed;
+        url("/Forms/IMG/Sign_In_Up_BG.png") center / cover no-repeat fixed;
 }
 
 /* ---------- Main page grid ---------- */
@@ -67,8 +67,34 @@ body {
 .box-1 {
     grid-area: box-1;
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.box-1::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 100vw;
+    transform: translateX(-50%);
+
+    background-color: transparent;
+    z-index: -1;
+
+    transition: background-color 0.3s ease;
+}
+
+.box-1.scrolled::before {
+    background-color: color-mix(in srgb, var(--color-green) 30%, transparent);
+    backdrop-filter: brightness(0.8);
+    box-shadow: 0 4px 15px rgb(0, 0, 0, 0.15);
 }
 
 .logo {
@@ -80,7 +106,7 @@ body {
 }
 
 .logo-icon::before {
-    content: url("/IMG/forms/login/LOGO.png");
+    content: url("/Forms/IMG/LOGO.png");
     position: absolute;
     left: -10px;
 }
@@ -109,7 +135,7 @@ body {
 }
 
 .btn.back-icon::before {
-    content: url("/IMG/forms/login/arrow-left-line 1.svg");
+    content: url("/Forms/IMG/arrow-left-line\ 1.svg");
     position: absolute;
     right: 70px;
 }
@@ -124,6 +150,9 @@ body {
     align-items: flex-start;
     gap: 30px;
     padding: 20px;
+    position: sticky;
+    top: 105px;
+    align-self: start;
 }
 
 .welcome {
@@ -235,6 +264,12 @@ body {
     color: var(--color-placeholder);
 }
 
+.helper-text {
+    color: var(--color-placeholder);
+    padding-top: 0.5px;
+    padding-bottom: 10px;
+}
+
 #password {
     margin-bottom: 8px;
 }
@@ -250,15 +285,12 @@ body {
     transform: translateY(-50%);
 }
 
-#email + .icon,
-#password ~ .icon:first-of-type {
+.input-wrap .icon:first-of-type {
     left: 15px;
-    right: auto;
 }
 
-#password ~ .icon:last-of-type {
+.input-wrap .icon:last-of-type:not(:first-of-type) {
     right: 15px;
-    left: auto;
 }
 
 /* ---------- Login links and button ---------- */
@@ -356,4 +388,48 @@ body {
     .box-3 {
         padding: 28px 20px;
     }
+}
+
+/* ----- Registration Field ----- */
+
+.noticeCard1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: color-mix(in srgb, var(--color-cream) 30% , transparent);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--color-green);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+#regAgreement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+}
+
+#redAgreement p {
+    margin: 0;
+}
+
+#loginPath1 {
+    padding: 40px 10px 5px 10px;
+}
+
+#noticeIMG {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    object-position: center;
 }

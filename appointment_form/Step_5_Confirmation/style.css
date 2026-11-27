@@ -1,0 +1,480 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --green: #19551f;
+    --dark-green: #005b0b;
+    --orange: #d88700;
+    --text: #292929;
+    --muted: #858585;
+    --line: #dedede;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f7f8f6;
+    color: var(--text);
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+/* MAIN CONTAINER */
+.app-shell {
+    width: min(1240px, calc(100% - 48px));
+    min-height: 100vh;
+    margin: auto;
+    padding: 24px 42px 30px;
+    background: white;
+    box-shadow: 0 0 24px rgba(0,0,0,.04);
+}
+
+/* HEADER */
+.brand-header {
+    display: none;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--green);
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #138b52;
+    border-radius: 50%;
+    color: #138b52;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.brand-name strong,
+.brand-name span {
+    display: block;
+}
+
+.brand-name strong {
+    font-size: 11px;
+}
+
+.brand-name span {
+    font-size: 9px;
+    font-weight: 700;
+}
+
+/* MOBILE PROGRESS */
+.mobile-progress {
+    display: none;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    color: var(--green);
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.progress-label span:last-child {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.progress-track {
+    height: 3px;
+    margin-top: 7px;
+    background: #e5e5e5;
+}
+
+.progress-track span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--orange);
+}
+
+/* MAIN LAYOUT */
+.confirmation-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 125px;
+    gap: 35px;
+    align-items: start;
+}
+
+.confirmation-content {
+    position: relative;
+    min-width: 0;
+    width: 100%;
+}
+
+/* HEADING */
+.confirmed-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.confirmed-heading h1 {
+    color: var(--green);
+    font-size: clamp(29px, 3.5vw, 40px);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.confirmed-heading h1 span {
+    color: var(--orange);
+}
+
+.confirmed-heading p {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* SUCCESS CHECKMARK */
+.success-icon {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 53px;
+    height: 53px;
+    margin-right: 5px;
+    border: 1px solid #a1d9a5;
+    border-radius: 50%;
+    background: #e2ffe6;
+    color: var(--dark-green);
+}
+
+.success-icon svg {
+    width: 31px;
+    height: 31px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* REFERENCE NUMBER */
+.reference-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 245px;
+    min-height: 23px;
+    margin-bottom: 17px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #e2ffe0;
+    color: var(--dark-green);
+    font-size: 9px;
+}
+
+/* APPOINTMENT DETAILS */
+.confirmation-details {
+    width: 100%;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    min-height: 27px;
+    padding: 6px 7px;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 9px;
+}
+
+.detail-row span {
+    flex: 1;
+    color: var(--muted);
+}
+
+.detail-row strong {
+    flex: 1;
+    color: #333;
+    text-align: right;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+/* WHAT HAPPENS NEXT */
+.next-steps {
+    margin: 14px 0 17px;
+}
+
+.next-steps h2 {
+    margin-bottom: 5px;
+    color: var(--dark-green);
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.next-steps ul {
+    padding-left: 15px;
+    color: var(--muted);
+    font-size: 8px;
+    line-height: 1.8;
+}
+
+.next-steps li {
+    padding-left: 1px;
+}
+
+/* BUTTONS */
+.confirmation-actions {
+    display: grid;
+    grid-template-columns: 0.85fr 1.3fr;
+    gap: 10px;
+}
+
+.download-button,
+.dashboard-button {
+    min-height: 35px;
+    padding: 7px 10px;
+    border-radius: 9px;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.download-button {
+    border: 1px solid #777;
+    background: white;
+    color: var(--green);
+}
+
+.dashboard-button {
+    border: 1px solid var(--green);
+    background: var(--green);
+    color: white;
+}
+
+.download-button:hover {
+    background: #f3f7f3;
+}
+
+.dashboard-button:hover {
+    background: #104318;
+}
+
+/* THANK YOU */
+.thank-you {
+    margin-top: 14px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+/* RIGHT PROGRESS INDICATOR */
+.step-sidebar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 105px;
+    height: 250px;
+    border-right: 4px solid #dedede;
+}
+
+/* All steps completed */
+.step-sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 4px;
+    height: 100%;
+    background: var(--orange);
+    z-index: 2;
+}
+
+.step {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    height: 50px;
+    padding-right: 15px;
+    color: var(--dark-green);
+    font-size: 8px;
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+    position: relative;
+    z-index: 3;
+}
+
+/* ==================================
+   TABLET
+================================== */
+@media (max-width: 850px) {
+
+    .app-shell {
+        width: min(700px, calc(100% - 24px));
+        padding: 20px 25px;
+    }
+
+    .confirmation-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .step-sidebar {
+        display: none;
+    }
+}
+
+
+/* =========================================
+   DESKTOP AND TABLET LAYOUT
+========================================= */
+
+@media (min-width: 561px) {
+
+    .app-shell {
+        width: 100%;
+        max-width: 1400px;
+        min-height: 100vh;
+        padding: 35px 7%;
+        margin: 0 auto;
+    }
+
+    .confirmation-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 60%) 105px;
+        justify-content: space-between;
+        align-items: start;
+        gap: 25px;
+    }
+
+    .confirmation-content {
+        width: 100%;
+        max-width: 850px;
+    }
+
+    .confirmed-heading {
+        margin-bottom: 12px;
+    }
+
+    .confirmed-heading h1 {
+        font-size: clamp(27px, 3.3vw, 38px);
+        letter-spacing: -1px;
+    }
+
+    .success-icon {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+
+    .reference-number {
+        width: 210px;
+        margin-bottom: 17px;
+    }
+
+    .detail-row {
+        min-height: 27px;
+        padding: 6px 7px;
+    }
+
+    .next-steps {
+        margin: 12px 0 16px;
+    }
+
+    .confirmation-actions {
+        display: grid;
+        grid-template-columns: 0.85fr 1.3fr;
+        gap: 10px;
+    }
+
+    .step-sidebar {
+        display: flex;
+        width: 105px;
+        height: 250px;
+        margin-top: 0;
+    }
+}
+
+
+/* =========================================
+   MOBILE LAYOUT
+========================================= */
+
+@media (max-width: 560px) {
+
+    .app-shell {
+        width: calc(100% - 12px);
+        padding: 12px 13px 20px;
+    }
+
+    .brand-header {
+        display: block;
+        padding-bottom: 9px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .mobile-progress {
+        display: block;
+        margin-top: 13px;
+    }
+
+    .confirmation-layout {
+        display: block;
+    }
+
+    .step-sidebar {
+        display: none;
+    }
+
+    .confirmed-heading {
+        margin-top: 19px;
+        align-items: flex-start;
+    }
+
+    .confirmed-heading h1 {
+        font-size: 19px;
+    }
+
+    .success-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .reference-number {
+        width: 100%;
+    }
+
+    .confirmation-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .dashboard-button {
+        order: 1;
+    }
+
+    .download-button {
+        order: 2;
+    }
+
+    .thank-you {
+        font-size: 8px;
+    }
+}

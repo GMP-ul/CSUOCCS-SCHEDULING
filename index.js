@@ -9,3 +9,8 @@ menuBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     navBtn.classList.remove('open');
 });
+
+function goto_sched() {
+
+    window.open("/Forms/appointment_forms/appointment_form_1.html", "_blank")
+}

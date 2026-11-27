@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSUOCCS Scheduler | Appointment Confirmed</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="app-shell">
+
+    <!-- HEADER -->
+    <header class="brand-header">
+        <div class="brand">
+            <div class="brand-mark">C</div>
+
+            <div class="brand-name">
+                <strong>CSUOCCS</strong>
+                <span>SCHEDULER</span>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- MOBILE PROGRESS -->
+    <div class="mobile-progress">
+
+        <div class="progress-label">
+            <span>CONFIRMATION</span>
+            <span>Step 5 of 5</span>
+        </div>
+
+        <div class="progress-track">
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <!-- MAIN LAYOUT -->
+    <div class="confirmation-layout">
+
+        <section class="confirmation-content">
+
+            <!-- HEADING -->
+            <div class="confirmed-heading">
+
+                <div>
+                    <h1>
+                        Appointment <span>Confirmed!</span>
+                    </h1>
+
+                    <p>
+                        A confirmation has been sent to your CarSU email.
+                    </p>
+                </div>
+
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M5 12.5L10 17L20 7"/>
+                    </svg>
+                </div>
+
+            </div>
+
+
+            <!-- REFERENCE NUMBER -->
+            <div class="reference-number">
+                <strong>Reference No.</strong>
+                <span id="reference-number">OCCS-2026-004821</span>
+            </div>
+
+
+            <!-- APPOINTMENT DETAILS -->
+            <div class="confirmation-details">
+
+                <div class="detail-row">
+                    <span>Applicant</span>
+                    <strong id="applicant-name">Genre y M. Plaza</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Applicant Type</span>
+                    <strong id="applicant-type">Student</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>College / Course</span>
+                    <strong id="college-course">CCIS - BS Computer Science</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Date</span>
+                    <strong id="appointment-date">September 15, 2026</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Time</span>
+                    <strong id="appointment-time">1:30 PM</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Office - Coordinator</span>
+                    <strong id="office-coordinator">
+                        OCCS Registrar - Ms. Santos
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- WHAT HAPPENS NEXT -->
+            <section class="next-steps">
+
+                <h2>WHAT HAPPENS NEXT</h2>
+
+                <ul>
+                    <li>
+                        Arrive 10 minutes early and bring a valid CSU ID.
+                    </li>
+
+                    <li>
+                        You'll get an email in your CarSU email with your information.
+                    </li>
+
+                    <li>
+                        Need to change plan? Visit CSU OCCS Office and find your coordinator.
+                    </li>
+                </ul>
+
+            </section>
+
+
+            <!-- BUTTONS -->
+            <div class="confirmation-actions">
+
+                <button class="download-button" id="download-button">
+                    Download Confirmation
+                </button>
+
+                <button class="dashboard-button" id="dashboard-button">
+                    Back to Dashboard
+                </button>
+
+            </div>
+
+
+            <!-- THANK YOU MESSAGE -->
+            <p class="thank-you">
+                Thank you for using CSU OCCS Scheduler. Please remember
+                all the information provided.
+            </p>
+
+        </section>
+
+
+        <!-- RIGHT SIDE PROGRESS INDICATOR -->
+        <aside class="step-sidebar">
+
+            <div class="step done">IDENTIFICATION</div>
+
+            <div class="step done">YOUR INFORMATION</div>
+
+            <div class="step done">SET SCHEDULE</div>
+
+            <div class="step done">Checking</div>
+
+            <div class="step active">CONFIRMATION</div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

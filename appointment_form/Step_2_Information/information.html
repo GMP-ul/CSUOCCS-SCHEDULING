@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form | Identification</title>
+
+    <link rel="icon" type="image/png" sizes="512x512" href="/IMG/image-removebg-preview.png">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Page stylesheet -->
+    <link rel="stylesheet" href="/appointment_form/shared_CSS_&_images/appointment_forms_step_1&2.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="top">
+            <h1 id="appointmentText">
+                <span style="color: #255F38;">Appointment</span>
+                <span style="color: #ce8200;">Form</span>
+            </h1>
+            <h3>Fields marked <span style="color: red;">*</span> are required.</h3>
+        </div>
+
+        <div class="middle">
+            <div class="inputCard">
+                <div>
+                    <h3 style="color: #255F38;">PERSONAL INFORMATION</h3>
+                </div>
+
+                <div class="field">
+                    <div id="field_70">
+                        <h3>
+                            First Name
+                            <span style="color: red;">*</span>
+                        </h3>
+                        <label for="firstName"></label>
+
+                        <input type="text" placeholder="Juan">
+                    </div>
+                    
+                    <div id="field_auto">
+                        <h3>
+                            M.I.
+                            <span style="color: #555"><i>(Optional)</i></span>
+                        </h3>
+                        <label for="M.I."></label>
+
+                        <input type="text" placeholder="D.">
+                    </div>
+
+                    <div id="field_auto">
+                        <h3>
+                            Ext.
+                            <span style="color: #555"><i>(Optional)</i></span>
+                        </h3>
+                        <label for="ext."></label>
+
+                        <input type="text" placeholder="Jr., III">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div id="field_50">
+                        <h3>
+                            Last Name
+                            <span style="color: red;">*</span>
+                        </h3>
+                        <label for="lastName"></label>
+
+                        <input type="text" placeholder="Dela Cruz">
+                    </div>
+                    
+                    <div id="field_auto">
+                        <h3>
+                            Contact Number
+                            <span style="color: red;">*</span>
+                        </h3>
+                        <label for="contact_number"></label>
+
+                        <input type="text" placeholder="09XX XXX XXXX">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div id="field_100">
+                        <h3>
+                            Email
+                            <span style="color: red;">*</span>
+                        </h3>
+                        <label for="email"></label>
+
+                        <input type="text" placeholder="juan.delacruz@carsu.edu.ph">
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="color: #255F38;">ACADEMIC INFORMATION</h3>
+                </div>
+
+                <div class="field">
+                    <div id="field_70">
+                        <h3>
+                            College
+                            <span style="color: red;">*</span>
+                        </h3>
+                        <label for="firstName"></label>
+
+                        <select name="colleges" id="colleges">
+                            <option value="caa">CAA</option>
+                            <option value="ccis">CCIS</option>
+                            <option value="ced">CED</option>
+                            <option value="cegs">CEGS</option>
+                            <option value="cofes">CoFES</option>
+                            <option value="chass">CHaSS</option>
+                            <option value="cmns">CMNS</option>
+                        </select>
+                    </div>
+                    
+                    <div id="field_auto">
+                        <h3>
+                            Course
+                            <span style="color: red;">*</span>
+                        </h3>
+                        <label for="course"></label>
+
+                        <select name="course" id="course">
+                            <option value="test1">test1</option>
+                            <option value="test2">test2</option>
+                            <option value="test3">test3</option>
+                            <option value="test4">test4</option>
+                            <option value="test5">test5</option>
+                        </select>
+                    </div>
+
+                    <div id="field_auto">
+                        <h3>
+                            Year
+                            <span style="color: red;">*</span>
+                        </h3>
+                        <label for="year"></label>
+
+                        <select name="year" id="year">
+                            <option value="year1">Year 1</option>
+                            <option value="year2">Year 2</option>
+                            <option value="year3">Year 3</option>
+                            <option value="year4">Year 4</option>
+                            <option value="year5">Year 5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="color: #255F38;">TEST</h3>
+                </div>
+
+                <div class="field">
+                    <div id="field_100">
+                        <h3>
+                            Type
+                            <span style="color: red;">*</span>
+                        </h3>
+                        <label for="test_type"></label>
+
+                        <select name="test_type" id="test_type">
+                            <option value="" disabled selected hidden>Select a test type</option>
+                            <option value="mental_test">Mental Ability Test</option>
+                            <option value="interest_test">Interest Test</option>
+                            <option value="emotional_test">Emotional Quotient Test</option>
+                            <option value="personality_test">Personality Test</option>
+                            <option value="aptitude_test">Aptitude Test</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="color: #255F38;">REFERRAL</h3>
+                </div>
+
+                <div class="field">
+                    <div id="field_100">
+                        <h3>
+                            Referral Code
+                            <span style="color: red;">*</span>
+                        </h3>
+                        <label for="referral_code"></label>
+
+                        <input type="text" placeholder="Enter code">
+                    </div>
+                </div>
+
+                <div>
+                    <p id="help">No code yet? <a href="/Steps/steps.html" target="_blank">Learn how referrals work</a></p>
+                </div>
+
+                <div  id="navForms">
+                    <a href="/Forms/appointment_forms/appointment_form_1.html" class="btn backBtn">
+                        <img src="/Forms/IMG/arrow-left-line 1.svg" alt="Back"> 
+                        Back
+                    </a>
+
+                    <a href="#" class="btn continueBtn" aria-disabled="true" title="The next page has not been connected yet">Continue</a>
+                </div>
+            </div>
+
+            <div class="stepTracker">
+                <div id="stepLabels">
+                    <h3>IDENTIFICATION</h3>
+                    <h3>YOUR INFORMATION</h3>
+                    <H3>SET SCHEDULE</H3>
+                    <H3>CHECKING</H3>
+                    <H3>CONFIRMATION</H3>
+                </div>
+                
+                <div class="progressBar">
+                    <div class="progressFill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/appointment_form/Step_2_Information/information.js"></script>
+</body>
+</html>
